@@ -1,0 +1,22 @@
+1. DTD = Document Type Definition
+The website for the city of Antwerp, antwerpen.be, uses the HTML5 doctype declaration.
+This is the modern standard for web development and is declared as follows:
+<!DOCTYPE html>
+
+2. The website for the city of Antwerp, antwerpen.be, includes the following meta tags for description and keywords:
+<meta name="description" content="Officiële website van de stad Antwerpen met online dienstverlening (e-loket en afspraken maken), praktische informatie (contactgegevens en openingsuren), nieuws op maat, stadsplan, vrijetijdskalender en vacatures.">
+
+3. Yes
+
+4. The <link rel="icon" href="***/favicon/***.png" /> tag is used to specify a favicon for a website. A favicon (short for "favorite icon") is a small icon that represents a website. It is typically displayed in the browser's address bar, next to the page title in a tab, and in bookmarks.
+- Explanation:
+<link>: This HTML element is used to define a relationship between the current document and an external resource.
+rel="icon": The rel attribute specifies the relationship between the current document and the linked resource. In this case, it indicates that the linked resource is an icon.
+href="***/favicon/***.png": The href attribute specifies the path to the favicon file. This can be a relative or absolute URL.
+
+- Effect in Chrome:
+In Chrome, you can see the effect of this line of code in several places:
+Browser Tab: The favicon appears next to the page title in the browser tab.
+Address Bar: The favicon is displayed in the address bar, next to the URL.
+Bookmarks: When you bookmark the page, the favicon appears next to the bookmark title.
+This small icon helps users quickly identify and differentiate between websites, especially when multiple tabs are open.
