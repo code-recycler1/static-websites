@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Lists (block-level)</title>
+</head>
+
+<body>
+    <!-- Unordered list. -->
+    <h2>Unnumbered Lists</h2>
+    <ul>
+        <li>Dog</li>
+        <li>Cat</li>
+        <li>Bird</li>
+        <li>Rabbit</li>
+    </ul>
+
+    <!-- Ordered list. -->
+    <h2>Numbered List</h2>
+    <ol>
+        <li>Pop</li>
+        <li>R &amp; B</li>
+        <li>Jazz</li>
+        <li>Rock</li>
+    </ol>
+
+    <!-- Definition lists. -->
+    <h2>Definition Lists</h2>
+    <dl>
+        <dt>Numbered List</dt>
+        <dd>Enumeration preceded by numbers.</dd>
+        <dt>Unnumbered List</dt>
+        <dd>Enumeration preceded by symbols.</dd>
+        <dt>Definition List</dt>
+        <dd>Glossary of terms.</dd>
+    </dl>
+
+    <!-- The principle of nested lists. -->
+    <h2>Example of Nested Lists</h2>
+    <ul>
+        <li>first item</li>
+        <li>second item
+            <!-- To start a new list within an item, we do not close the li-tag with </li> yet -->
+            <ol>
+                <li>second item first subitem</li>
+                <li>second item second subitem</li>
+                <li>second item third subitem</li>
+            </ol>
+            <!-- Here comes the closing tag </li>, after the end of the new list. -->
+        </li>
+        <li>third item</li>
+    </ul>
+
+</body>
+
+</html>
