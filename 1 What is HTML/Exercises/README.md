@@ -49,6 +49,7 @@ The word ‘**Geel**’ is emphasized (strong), and the number ‘*4*’ is emph
 2. Open the document in your editor. Save it as ``exercise_3.html``. Improve the webpage so that it becomes valid XHTML 1.0 Strict. Add the correct DOCTYPE (see ``template.html``).
 
 3. The desired end result is:
+
 ![Exercise 3 Image 1](./Screenshots/Exercise_3-1.png)
 
 
