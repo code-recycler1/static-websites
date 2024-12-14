@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Apply box-sizing to all elements */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Set the body margin to 0 */
+        body {
+            margin: 0;
+        }
+
+        /* Create a 3-column layout with padding */
+        .column {
+            float: left;
+            width: 33.33%;
+            /* Each column will take up 1/3 of the available width */
+            padding: 15px;
+        }
+
+        /* Clear floats in the .row container to avoid layout issues */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Media query for screens 600px or less in width (e.g., mobile devices) */
+        @media screen and (max-width: 600px) {
+
+            /* In this case, make each column take up 100% width (stack vertically) */
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+    </div>
+</body>
+
+</html>

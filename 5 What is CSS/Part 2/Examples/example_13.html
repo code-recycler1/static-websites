@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Apply full height and remove default margin for the body and html elements */
+        body,
+        html {
+            height: 100%;
+            /* Ensure the body and html take up the full viewport height */
+            margin: 0;
+            /* Remove default margin to ensure full control over layout */
+            font-family: Lato, Arial;
+            /* Set the font to 'Lato', with 'Arial' as fallback */
+        }
+
+        /* Style for the background section */
+        .bg {
+            background-image: url("img/img_girl.jpg");
+            /* Set the background image */
+            background-color: #cccccc;
+            /* Fallback background color if image is unavailable */
+            height: 100%;
+            /* Ensure the background fills the entire height of the container */
+            background-position: center;
+            /* Center the background image */
+            background-repeat: no-repeat;
+            /* Prevent background image from repeating */
+            background-size: cover;
+            /* Ensure the background image covers the entire container */
+        }
+
+        /* Position and style for the caption text */
+        .caption {
+            position: absolute;
+            /* Use absolute positioning for placing the caption */
+            left: 0;
+            /* Align the caption to the left */
+            top: 50%;
+            /* Vertically center the caption */
+            width: 100%;
+            /* Ensure the caption spans the full width of the container */
+            text-align: center;
+            /* Center-align the text */
+            color: #000;
+            /* Set the text color to black */
+        }
+
+        /* Style for the span element within the caption */
+        .caption span.border {
+            background-color: #111;
+            /* Set a dark background for the span */
+            color: #fff;
+            /* Set the text color to white for contrast */
+            padding: 18px;
+            /* Add padding around the text for spacing */
+            font-size: 25px;
+            /* Set the font size */
+            letter-spacing: 10px;
+            /* Add spacing between letters */
+        }
+
+        /* Utility class for adding 10px padding */
+        .padding-p {
+            padding: 10px;
+            /* Apply 10px padding to the element */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="caption">
+            <span class="border">HALF PAGE</span>
+            <br><br>
+            <span class="border">BACKGROUND IMAGE</span>
+        </div>
+    </div>
+
+    <p class="padding-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It
+        has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</body>
+
+</html>

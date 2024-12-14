@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Apply border-box box-sizing model to all elements */
+        * {
+            box-sizing: border-box;
+            /* Ensures padding and border are included in the element's total width and height */
+        }
+
+        /* Reset the margin for the body element */
+        body {
+            margin: 0;
+            /* Remove default margin for body to avoid extra spacing */
+        }
+
+        /* Style for columns, used in a two-column layout */
+        .column {
+            float: left;
+            /* Float the columns next to each other */
+            width: 50%;
+            /* Set each column to take up 50% of the container width */
+            padding: 15px;
+            /* Add padding inside each column for spacing */
+        }
+
+        /* Clear floated elements within the row */
+        .row:after {
+            content: "";
+            /* Insert an empty content to clear the float */
+            display: table;
+            /* Use a table display to apply clearfix */
+            clear: both;
+            /* Clear the float, allowing the row to contain its floated elements */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+    </div>
+</body>
+
+</html>

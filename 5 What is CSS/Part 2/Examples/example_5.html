@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Apply border-box box-sizing model to all elements */
+        * {
+            box-sizing: border-box;
+            /* Ensures padding and borders are included in the element's total width and height */
+        }
+
+        /* Reset the margin for the body element */
+        body {
+            margin: 0;
+            /* Remove default margin for body to avoid extra spacing around the page */
+        }
+
+        /* Style for the side sections, which will take up 25% of the container */
+        .side {
+            float: left;
+            /* Float the side section to the left */
+            width: 25%;
+            /* Each side section occupies 25% of the container's width */
+            padding: 15px;
+            /* Add padding inside for spacing between content and border */
+        }
+
+        /* Style for the container section, which will take up 50% of the container */
+        .container {
+            float: left;
+            /* Float the container section to the left */
+            width: 50%;
+            /* Container occupies 50% of the container's width */
+            padding: 15px;
+            /* Add padding inside for spacing between content and border */
+        }
+
+        /* Clear floated elements within the row */
+        .row:after {
+            content: "";
+            /* Insert empty content to trigger clearfix */
+            display: table;
+            /* Ensures the clearfix works properly */
+            clear: both;
+            /* Clear any floated elements (side and container) within the row */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="side">
+            <h2>Side column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+        <div class="container">
+            <h2>Main column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+        <div class="side">
+            <h2>Side column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -234,7 +234,7 @@ input[type=submit] {
 }
 
 /* Styling for buttons that are anchor tags with type=button */
-a[type=button] {
+a.button {
     display: block;
     /* Make the anchor a block element */
     background-color: #f04c25;

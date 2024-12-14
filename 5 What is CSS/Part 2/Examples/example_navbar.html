@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Set the body margin to 0 and define the default font for the page */
+        body {
+            margin: 0;
+            /* Remove default margin for a consistent layout */
+            font-family: Arial, sans-serif;
+            /* Set the font to Arial or fallback to sans-serif */
+        }
+
+        /* Styling for the navigation bar container */
+        .navigation {
+            overflow: hidden;
+            /* Prevent overflow of content */
+            background-color: #0091A6;
+            /* Set a blue background color for the navigation bar */
+        }
+
+        /* Styling for each navigation link */
+        .navigation a {
+            float: left;
+            /* Float the links to the left, aligning them horizontally */
+            display: block;
+            /* Make the link a block element to allow padding */
+            color: #f2f2f2;
+            /* Set text color to light grey */
+            text-align: center;
+            /* Center-align the text inside each link */
+            padding: 14px 16px;
+            /* Add padding inside each link for spacing */
+            text-decoration: none;
+            /* Remove underline from links */
+            font-size: 17px;
+            /* Set the font size of the navigation links */
+        }
+
+        /* Hover effect for links in the navigation */
+        .navigation a:hover {
+            background-color: #EB6241;
+            /* Change background to a reddish color on hover */
+        }
+
+        /* Styling for the active link in the navigation */
+        .navigation a.active {
+            background-color: #E74018;
+            /* Change the background color to a darker shade when active */
+        }
+
+        /* Styling for the navigation icon (hamburger menu) */
+        .navigation a.icon {
+            float: right;
+            /* Align the icon to the right */
+            display: none;
+            /* Initially hide the icon */
+        }
+
+        /* Media query for screens smaller than 600px (mobile devices) */
+        @media screen and (max-width: 600px) {
+
+            /* Hide all navigation links except the first one */
+            .navigation a:not(:first-child) {
+                display: none;
+            }
+
+            /* Show the hamburger icon on small screens */
+            .navigation a.icon {
+                display: block;
+            }
+
+            /* Adjust the navigation bar layout when it's in responsive mode */
+            .navigation.responsive {
+                position: relative;
+                /* Change the positioning to relative to control child elements */
+            }
+
+            /* Position the hamburger icon in the top right corner when responsive */
+            .navigation.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            /* Adjust the styling for navigation links when the navigation bar is in responsive mode */
+            .navigation.responsive a {
+                float: none;
+                /* Remove float to stack the links vertically */
+                display: block;
+                /* Make the links block elements for vertical alignment */
+                text-align: left;
+                /* Align text to the left in the links */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navigation" id="navigation-head">
+        <a href="#" class="active">Start</a>
+        <a href="#">Projecten</a>
+        <a href="#">Over ons</a>
+        <a href="#">Contact</a>
+        <a href="#" class="icon" onclick="toggleResponsiveClass()"><i class="fa fa-bars"></i></a>
+    </div>
+
+    <script>
+        function toggleResponsiveClass() {
+            var element = document.getElementById("navigation-head");
+            if (element.className === "navigation") {
+                element.className += " responsive";
+            } else {
+                element.className = "navigation";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

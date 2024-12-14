@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Default body style for smaller screens */
+        body {
+            background-color: red;
+            /* Red background color by default */
+        }
+
+        /* Media query for screens with a minimum width of 1000px */
+        @media screen and (min-width: 1000px) {
+            body {
+                background-color: blue;
+                /* Blue background color for screens that are at least 1000px wide */
+            }
+        }
+
+        /* Media query for screens with a minimum width of 1500px */
+        @media screen and (min-width: 1500px) {
+            body {
+                background-color: orange;
+                /* Orange background color for screens that are at least 1500px wide */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The @media Rule</h1>
+
+    <p>Resize the browser window. When the width of this document is 1000 pixels or more, the background-color is
+        "blue", when the width exceeds 1500 pixels the background color will be "orange" and otherwise it will be "red".
+    </p>
+</body>
+
+</html>

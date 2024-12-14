@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Apply box-sizing rule universally (currently commented out) 
+   This rule helps with box-sizing by including padding and border in the element's total width and height */
+        * {
+            /* box-sizing: border-box;  Uncomment this to ensure padding and borders don't increase element's dimensions */
+        }
+
+        /* Reset the margin for the body element to avoid default browser spacing */
+        body {
+            margin: 0;
+            /* Remove default margin to ensure layout consistency */
+        }
+
+        /* Define styles for a flexible two-column layout */
+        .column {
+            float: left;
+            /* Float columns to the left for horizontal alignment */
+            width: 50%;
+            /* Set each column's width to 50%, creating a two-column layout */
+            padding: 15px;
+            /* Add padding inside each column for spacing */
+        }
+
+        /* Clearfix for the row to contain floated child elements */
+        .row:after {
+            content: "";
+            /* Insert an empty content block after the row's children */
+            display: table;
+            /* Use table display for clearing the float */
+            clear: both;
+            /* Clear floats to ensure the container grows to fit floated elements */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
+                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
+                aliquam placerat, purus leo tincidunt eros,
+                eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+    </div>
+</body>
+
+</html>

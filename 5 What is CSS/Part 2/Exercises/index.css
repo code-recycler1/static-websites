@@ -1,0 +1,364 @@
+/* Universal reset */
+* {
+    box-sizing: border-box;
+    /* Ensures padding and borders are included in the element's total width/height */
+}
+
+/* Removes default margin from the body and sets up a flex layout */
+body {
+    margin: 0px;
+    /* Removes default margin from the body */
+    display: flex;
+    /* Uses flexbox for layout */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 200px;
+    /* Fixed width for the navbar */
+    background-color: #f8f9fa;
+    /* Light background color */
+    padding: 15px;
+    /* Padding inside the navbar */
+    position: fixed;
+    /* Fixes the navbar to the left side of the screen */
+    top: 0;
+    /* Aligns the navbar to the top of the screen */
+    left: 0;
+    /* Aligns the navbar to the left of the screen */
+    height: 100%;
+    /* Makes the navbar take full height */
+    overflow-y: auto;
+    /* Allows scrolling within the navbar if content exceeds height */
+}
+
+/* Navbar list styles */
+.navbar ul {
+    list-style-type: none;
+    /* Removes default list bullets */
+    padding: 0;
+    /* Removes padding from the list */
+}
+
+/* Navbar list item styling */
+.navbar ul li {
+    margin: 10px 0;
+    /* Adds space between list items */
+}
+
+/* Styling for links in the navbar */
+.navbar ul li a {
+    text-decoration: none;
+    /* Removes the underline from links */
+    color: #007bff;
+    /* Sets link color to blue */
+}
+
+/* Main content area styling */
+.content {
+    margin-left: 220px;
+    /* Adds space on the left side for the fixed navbar */
+    flex-grow: 1;
+    /* Allows content area to take up remaining space */
+    padding: 15px;
+    /* Padding around the content */
+}
+
+
+/* Header styling */
+h1 {
+    padding-left: 10px;
+    /* Adds left padding for the h1 element */
+}
+
+/* Clears floated elements in .row */
+.row:after {
+    content: "";
+    display: table;
+    /* Clears float, ensuring proper layout of subsequent elements */
+    clear: both;
+    margin-bottom: 50px;
+    /* Adds space below the row */
+}
+
+/* Exercise 1 content styling */
+.exercise1-content {
+    background-color: blue;
+    /* Sets background color */
+    color: white;
+    /* Text color */
+    padding: 10px;
+    /* Adds padding around the content */
+    width: 300px;
+    /* Fixed width */
+    margin: auto;
+    /* Centers content horizontally */
+}
+
+/* Exercise 2 content and layout */
+.exercise2-content {
+    background-color: gray;
+    /* Sets background color */
+    height: 400px;
+    /* Fixed height */
+    padding: 10px;
+    /* Adds padding */
+}
+
+/* Yellow section within Exercise 2 */
+.exercise2-yellow {
+    height: 100px;
+    /* Fixed height */
+    width: 50%;
+    /* Takes half the width of the parent */
+    background-color: yellow;
+    /* Sets yellow background */
+    text-align: center;
+    /* Centers text */
+}
+
+/* Red section within Exercise 2 */
+.exercise2-red {
+    height: 200px;
+    /* Fixed height */
+    width: 75%;
+    /* Takes 75% of the width */
+    background-color: red;
+    /* Red background */
+    padding: 5px;
+    /* Padding for spacing */
+}
+
+/* White section within Exercise 2 */
+.exercise2-white {
+    height: 300px;
+    /* Fixed height */
+    width: 50%;
+    /* 50% width of parent */
+    background-color: white;
+    /* White background */
+    padding: 5px;
+    /* Padding inside the container */
+}
+
+/* Exercise 3 layout with two columns */
+.exercise3-content {
+    margin-bottom: 50px;
+    /* Adds space below */
+}
+
+/* Left column in Exercise 3 */
+.exercise3-column-30 {
+    float: left;
+    /* Floats the element left */
+    width: 30%;
+    /* 30% width of the parent */
+    padding: 15px;
+    /* Padding inside the column */
+}
+
+/* Right column in Exercise 3 */
+.exercise3-column-70 {
+    float: left;
+    /* Floats the element left */
+    width: 70%;
+    /* 70% width of the parent */
+    padding: 15px;
+    /* Padding inside the column */
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 600px) {
+
+    .exercise3-column-30,
+    .exercise3-column-70 {
+        width: 100%;
+        /* Columns take up 100% width on smaller screens */
+    }
+}
+
+/* Exercise 4 layout with three columns */
+.exercise4-content {
+    margin-bottom: 50px;
+    /* Adds space below */
+}
+
+/* 60% width column in Exercise 4 */
+.exercise4-column-60 {
+    float: left;
+    /* Floats the element left */
+    width: 60%;
+    /* 60% width of the parent */
+    padding: 15px;
+    /* Padding inside the column */
+}
+
+/* 40% width column in Exercise 4 */
+.exercise4-column-40 {
+    float: left;
+    /* Floats the element left */
+    width: 40%;
+    /* 40% width of the parent */
+    padding: 15px;
+    /* Padding inside the column */
+}
+
+/* 25% width column in Exercise 4 */
+.exercise4-column-25 {
+    float: left;
+    /* Floats the element left */
+    width: 25%;
+    /* 25% width of the parent */
+    padding: 15px;
+    /* Padding inside the column */
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 500px) {
+
+    .exercise4-column-60,
+    .exercise4-column-40,
+    .exercise4-column-25 {
+        width: 100%;
+        /* All columns take up 100% width on very small screens */
+    }
+}
+
+/* Exercise 5 header, navigation, content, and footer */
+
+/* Header styling for Exercise 5 */
+.exercise5-header {
+    background-color: black;
+    /* Dark background */
+    color: white;
+    /* White text */
+    padding: 5px;
+    /* Padding around the header */
+    text-align: center;
+    /* Centers text horizontally */
+}
+
+/* Sidebar navigation for Exercise 5 */
+.exercise5-navigation {
+    line-height: 30px;
+    /* Sets the line height for navigation items */
+    background-color: #eeeeee;
+    /* Light gray background */
+    height: 500px;
+    /* Fixed height */
+    width: 30%;
+    /* 30% width of the parent */
+    float: left;
+    /* Floats navigation on the left */
+    padding: 5px;
+    /* Padding around the navigation */
+}
+
+/* Main content area for Exercise 5 */
+.exercise5-content {
+    width: 70%;
+    /* 70% width of the parent */
+    padding: 5px;
+    /* Padding inside the content */
+    overflow: auto;
+    /* Handles content overflow */
+}
+
+/* Footer for Exercise 5 */
+.exercise5-footer {
+    background-color: black;
+    /* Dark background */
+    color: white;
+    /* White text */
+    clear: both;
+    /* Ensures footer is below floating elements */
+    text-align: center;
+    /* Centers footer text */
+    padding: 5px;
+    /* Padding around the footer */
+}
+
+/* Exercise 6 header, navigation, columns, and footer */
+
+#exercise6 {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling for Exercise 6 */
+.exercise6-header {
+    background-color: #f1f1f1;
+    /* Light background */
+    padding: 20px;
+    /* Padding around the header */
+    text-align: center;
+    /* Centers header text */
+}
+
+/* Navigation for Exercise 6 */
+.exercise6-topnav {
+    overflow: hidden;
+    /* Prevents overflow */
+    background-color: #333;
+    /* Dark background for nav */
+}
+
+/* Links inside Exercise 6 top navigation */
+.exercise6-topnav a {
+    float: left;
+    /* Floats links to the left */
+    display: block;
+    /* Makes links block-level elements */
+    color: #f2f2f2;
+    /* Light text color */
+    text-align: center;
+    /* Centers the text */
+    padding: 14px 16px;
+    /* Adds padding around the link */
+    text-decoration: none;
+    /* Removes underline */
+}
+
+/* Hover effect for navigation links */
+.exercise6-topnav a:hover {
+    background-color: #ddd;
+    /* Light background on hover */
+    color: black;
+    /* Text turns black on hover */
+}
+
+/* Columns for content inside Exercise 6 */
+.exercise6-column {
+    float: left;
+    /* Floats the columns left */
+    padding: 15px;
+    /* Padding inside the columns */
+}
+
+/* Specific column widths for Exercise 6 */
+.exercise6-side {
+    width: 20%;
+    /* 20% width for side column */
+}
+
+.exercise6-middle {
+    width: 60%;
+    /* 60% width for middle column */
+}
+
+/* Responsive design for small screens */
+@media screen and (max-width: 600px) {
+    .exercise6-column {
+        width: 100%;
+        /* Makes all columns take full width on small screens */
+    }
+}
+
+/* Footer for Exercise 6 */
+.exercise6-footer {
+    background-color: #F1F1F1;
+    /* Light background for footer */
+    text-align: center;
+    /* Centers the footer text */
+    padding: 10px;
+    /* Padding around the footer */
+}
