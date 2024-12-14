@@ -1,0 +1,498 @@
+/* Body element: Remove default margin */
+body {
+  margin: 0;
+  /* Remove default body margin */
+}
+
+/* Demo container for clocks: Set background, padding, width, and height */
+.demo-container.clocks {
+  background: #3cd19e;
+  /* Set background color */
+  padding: 0;
+  /* Remove any padding */
+  width: 100%;
+  /* Set width to 100% of the viewport */
+  height: 100vh;
+  /* Set height to 100% of the viewport */
+  margin: 0;
+  /* Remove default margin */
+  overflow: hidden;
+  /* Hide overflow */
+}
+
+/* Clock styling: Set border radius, background gradient, position, and opacity */
+.clock {
+  border-radius: 50%;
+  /* Make the clock circular */
+  background: -webkit-radial-gradient(#000000, #000000 0.1em, #ffffff 0.1em, #ffffff), #fff;
+  /* Radial gradient for clock face */
+  background: radial-gradient(#000000, #000000 0.1em, #ffffff 0.1em, #ffffff), #fff;
+  /* Radial gradient for clock face */
+  display: inline-block;
+  /* Display as inline block */
+  margin: 1%;
+  /* Add margin around the clock */
+  padding-bottom: 31%;
+  /* Maintain aspect ratio for the clock */
+  position: relative;
+  /* Position clock relative to parent */
+  top: 50%;
+  /* Position clock vertically */
+  width: 31%;
+  /* Set clock width */
+  opacity: 0;
+  /* Set initial opacity to 0 (hidden) */
+  -webkit-transform: translateY(-40%);
+  /* Move clock up by 40% vertically (for centering) */
+  transform: translateY(-40%);
+  /* Move clock up by 40% vertically (for centering) */
+}
+
+/* Clock show class: Fade in and position correctly */
+.clock.show {
+  opacity: 1;
+  /* Make the clock visible */
+  -webkit-transform: translateY(-50%);
+  /* Center the clock vertically */
+  transform: translateY(-50%);
+  /* Center the clock vertically */
+  -webkit-transition: all 2.5s 0.5s cubic-bezier(0.12, 1.03, 0.34, 1);
+  /* Smooth transition */
+  transition: all 2.5s 0.5s cubic-bezier(0.12, 1.03, 0.34, 1);
+  /* Smooth transition */
+}
+
+/* Clock center dot (the origin of the clock hands) */
+.clock::after {
+  background: red;
+  /* Set the dot color to red */
+  border-radius: 50%;
+  /* Make it round */
+  content: "";
+  /* Generate an empty element */
+  position: absolute;
+  /* Position absolutely inside the clock */
+  left: 50%;
+  /* Center horizontally */
+  top: 50%;
+  /* Center vertically */
+  -webkit-transform: translate(-50%, -50%);
+  /* Adjust for true center */
+  transform: translate(-50%, -50%);
+  /* Adjust for true center */
+  width: 4%;
+  /* Set size of the dot */
+  height: 4%;
+  /* Set size of the dot */
+  z-index: 10;
+  /* Ensure it stays above other elements */
+}
+
+/* Container for clock hands: Position them absolutely */
+.minutes-container,
+.hours-container,
+.seconds-container {
+  position: absolute;
+  /* Position absolutely */
+  top: 0;
+  /* Align to top */
+  right: 0;
+  /* Align to right */
+  bottom: 0;
+  /* Align to bottom */
+  left: 0;
+  /* Align to left */
+}
+
+/* Hours container: Rotate the container continuously for 12 hours */
+.hours-container {
+  -webkit-animation: rotate 43200s infinite linear;
+  /* 12 hours rotation */
+  animation: rotate 43200s infinite linear;
+  /* 12 hours rotation */
+}
+
+/* Minutes container: Rotate the container continuously for 1 hour */
+.linear .minutes-container {
+  -webkit-animation: rotate 3600s infinite linear;
+  /* 1 hour rotation */
+  animation: rotate 3600s infinite linear;
+  /* 1 hour rotation */
+}
+
+/* Seconds container: Rotate the container continuously for 1 minute */
+.linear .seconds-container {
+  -webkit-animation: rotate 60s infinite linear;
+  /* 1 minute rotation */
+  animation: rotate 60s infinite linear;
+  /* 1 minute rotation */
+}
+
+/* Animation using steps for minutes */
+.steps .minutes-container {
+  -webkit-animation: rotate 3600s infinite steps(60);
+  /* Use steps for minute movement */
+  animation: rotate 3600s infinite steps(60);
+  /* Use steps for minute movement */
+}
+
+/* Animation using steps for seconds */
+.steps .seconds-container {
+  -webkit-animation: rotate 60s infinite steps(60);
+  /* Use steps for second movement */
+  animation: rotate 60s infinite steps(60);
+  /* Use steps for second movement */
+}
+
+/* Remove animation for local steps (to stop movement) */
+.local.steps .minutes-container {
+  -webkit-animation: none;
+  /* No animation */
+  animation: none;
+  /* No animation */
+}
+
+/* Bounce effect for minutes hands */
+.bounce .minutes-container {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  /* Bounce effect */
+  transition: -webkit-transform 0.3s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  /* Bounce effect */
+  transition: transform 0.3s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  /* Bounce effect */
+  transition: transform 0.3s cubic-bezier(0.4, 2.08, 0.55, 0.44), -webkit-transform 0.3s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  /* Bounce effect */
+}
+
+/* Bounce effect for seconds hands */
+.bounce .seconds-container {
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  /* Bounce effect */
+  transition: -webkit-transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  /* Bounce effect */
+  transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  /* Bounce effect */
+  transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44), -webkit-transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  /* Bounce effect */
+}
+
+/* Hour hand styling: Position and size */
+.hours {
+  background: #000;
+  /* Set background color to black */
+  width: 3.5%;
+  /* Set width */
+  height: 40%;
+  /* Set height */
+  position: absolute;
+  /* Position absolutely */
+  left: 48.25%;
+  /* Position horizontally */
+  top: 22%;
+  /* Position vertically */
+  -webkit-transform-origin: 50% 71%;
+  /* Set the origin for rotation */
+  transform-origin: 50% 71%;
+  /* Set the origin for rotation */
+}
+
+/* Minute hand styling: Position and size */
+.minutes {
+  background: #000;
+  /* Set background color to black */
+  width: 3.5%;
+  /* Set width */
+  height: 55%;
+  /* Set height */
+  position: absolute;
+  /* Position absolutely */
+  left: 48.25%;
+  /* Position horizontally */
+  top: 7%;
+  /* Position vertically */
+  -webkit-transform-origin: 50% 78.5%;
+  /* Set the origin for rotation */
+  transform-origin: 50% 78.5%;
+  /* Set the origin for rotation */
+}
+
+/* Second hand styling: Position and size */
+.seconds {
+  background: red;
+  /* Set background color to red */
+  width: 1.5%;
+  /* Set width */
+  height: 42%;
+  /* Set height */
+  position: absolute;
+  /* Position absolutely */
+  left: 49.25%;
+  /* Position horizontally */
+  top: 20%;
+  /* Position vertically */
+  -webkit-transform-origin: 50% 71%;
+  /* Set the origin for rotation */
+  transform-origin: 50% 71%;
+  /* Set the origin for rotation */
+  z-index: 8;
+  /* Ensure the second hand is above other elements */
+}
+
+/* Label styling: Position and style for clock label */
+.label {
+  background: #fff;
+  /* Set background color */
+  border-radius: 0.25em;
+  /* Rounded corners */
+  color: #000;
+  /* Set text color */
+  font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+  /* Set font */
+  font-size: 1em;
+  /* Set font size */
+  font-weight: bold;
+  /* Make font bold */
+  text-transform: uppercase;
+  /* Uppercase text */
+  padding: 0.5em 0.75em 0.25em;
+  /* Add padding */
+  position: absolute;
+  /* Position absolutely */
+  top: -4em;
+  /* Position above clock */
+  left: 50%;
+  /* Center horizontally */
+  -webkit-transform: translate(-50%, 0);
+  /* Center horizontally */
+  transform: translate(-50%, 0);
+  /* Center horizontally */
+}
+
+/* Keyframes for rotation animation */
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    /* Complete rotation */
+    transform: rotateZ(360deg);
+    /* Complete rotation */
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    /* Complete rotation */
+    transform: rotateZ(360deg);
+    /* Complete rotation */
+  }
+}
+
+/* Clock station styling: Set background and box shadow */
+.clock.station {
+  background: #fff url(//cssanimation.rocks/assets/images/posts/clocks/station_clock.svg) no-repeat center;
+  /* Set clock station image */
+  background-size: 95%;
+  /* Resize image */
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2) inset;
+  /* Add inset shadow */
+}
+
+/* Styling for second hand on station clock */
+.clock.station .seconds::before {
+  background: red;
+  /* Set background color for second hand */
+  border-radius: 50%;
+  /* Make it round */
+  content: "";
+  /* Generate an empty element */
+  position: absolute;
+  /* Position absolutely */
+  top: -9%;
+  /* Position above the clock */
+  left: -200%;
+  /* Position far left */
+  height: 18%;
+  /* Set height */
+  width: 500%;
+  /* Set width */
+}
+
+/* iOS7 clock styling: Set background image and size */
+.clock.ios7 {
+  background: #fff url(/assets/images/posts/clocks/ios_clock.svg) no-repeat center;
+  /* Set iOS clock background */
+  background-size: 88%;
+  /* Resize image */
+}
+
+/* Center dot for iOS7 clock */
+.clock.ios7:before {
+  background: black;
+  /* Set color */
+  border-radius: 50%;
+  /* Make it round */
+  content: "";
+  /* Generate an empty element */
+  position: absolute;
+  /* Position absolutely */
+  left: 50%;
+  /* Center horizontally */
+  top: 50%;
+  /* Center vertically */
+  -webkit-transform: translate(-50%, -50%);
+  /* Center horizontally and vertically */
+  transform: translate(-50%, -50%);
+  /* Center horizontally and vertically */
+  width: 6%;
+  /* Set size */
+  height: 6%;
+  /* Set size */
+  z-index: 0;
+  /* Position it below clock hands */
+}
+
+/* Additional styling for second hand on iOS7 clock */
+.clock.ios7:after {
+  width: 2%;
+  /* Set width */
+  height: 2%;
+  /* Set height */
+}
+
+/* Styling for second hand in iOS7 clock */
+.clock.ios7 .seconds {
+  border-radius: 200%/10%;
+  /* Set second hand radius */
+  height: 30%;
+  /* Set height */
+  left: 49.5%;
+  /* Position horizontally */
+  top: 20%;
+  /* Position vertically */
+  width: 1%;
+  /* Set width */
+  -webkit-transform-origin: 50% 100%;
+  /* Set rotation origin */
+  transform-origin: 50% 100%;
+  /* Set rotation origin */
+}
+
+/* Styling for minute hand in iOS7 clock */
+.clock.ios7 .minutes {
+  border-radius: 150%/10%;
+  /* Set minute hand radius */
+  width: 2%;
+  /* Set width */
+  height: 35%;
+  /* Set height */
+  left: 49%;
+  /* Position horizontally */
+  top: 15%;
+  /* Position vertically */
+  -webkit-transform-origin: 50% 100%;
+  /* Set rotation origin */
+  transform-origin: 50% 100%;
+  /* Set rotation origin */
+}
+
+/* Styling for hour hand in iOS7 clock */
+.clock.ios7 .hours {
+  border-radius: 85%/10%;
+  /* Set hour hand radius */
+  width: 2%;
+  /* Set width */
+  height: 20%;
+  /* Set height */
+  left: 49%;
+  /* Position horizontally */
+  top: 30%;
+  /* Position vertically */
+  -webkit-transform-origin: 50% 100%;
+  /* Set rotation origin */
+  transform-origin: 50% 100%;
+  /* Set rotation origin */
+}
+
+/* Simple clock styling */
+.clock.simple {
+  background: #fff url(/assets/images/posts/clocks/ios_clock.svg) no-repeat center;
+  /* Set simple clock background */
+  background-size: 88%;
+  /* Resize image */
+}
+
+/* Center dot for simple clock */
+.clock.simple:after {
+  background-color: #000;
+  /* Set dot color */
+  width: 5%;
+  /* Set size */
+  height: 5%;
+  /* Set size */
+}
+
+/* Second hand for simple clock */
+.clock.simple .seconds {
+  background-color: #000;
+  /* Set color */
+  height: 45%;
+  /* Set height */
+  left: 49.5%;
+  /* Position horizontally */
+  top: 14%;
+  /* Position vertically */
+  width: 1%;
+  /* Set width */
+  -webkit-transform-origin: 50% 80%;
+  /* Set rotation origin */
+  transform-origin: 50% 80%;
+  /* Set rotation origin */
+}
+
+/* Minute hand for simple clock */
+.clock.simple .minutes {
+  width: 2%;
+  /* Set width */
+  height: 40%;
+  /* Set height */
+  left: 49%;
+  /* Position horizontally */
+  top: 10%;
+  /* Position vertically */
+  -webkit-transform-origin: 50% 100%;
+  /* Set rotation origin */
+  transform-origin: 50% 100%;
+  /* Set rotation origin */
+}
+
+/* Hour hand for simple clock */
+.clock.simple .hours {
+  width: 2.5%;
+  /* Set width */
+  height: 20%;
+  /* Set height */
+  left: 48.75%;
+  /* Position horizontally */
+  top: 30%;
+  /* Position vertically */
+  -webkit-transform-origin: 50% 100%;
+  /* Set rotation origin */
+  transform-origin: 50% 100%;
+  /* Set rotation origin */
+}
+
+/* Angled hour hand */
+.hours.angled {
+  -webkit-transform: rotateZ(-40deg);
+  /* Rotate hour hand */
+  transform: rotateZ(-40deg);
+  /* Rotate hour hand */
+}
+
+/* Angled minute hand */
+.minutes.angled {
+  -webkit-transform: rotateZ(40deg);
+  /* Rotate minute hand */
+  transform: rotateZ(40deg);
+  /* Rotate minute hand */
+}

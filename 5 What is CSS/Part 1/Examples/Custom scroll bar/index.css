@@ -1,0 +1,59 @@
+/* Ensures the HTML element can scroll if content overflows */
+html {
+    overflow: auto;
+    /* Allows the browser to add scrollbars as needed */
+}
+
+/* Styles for the body element */
+body {
+    position: absolute;
+    /* Positions the body relative to the edges of the viewport */
+    top: 20px;
+    /* Adds space from the top of the viewport */
+    left: 20px;
+    /* Adds space from the left of the viewport */
+    bottom: 20px;
+    /* Adds space from the bottom of the viewport */
+    right: 20px;
+    /* Adds space from the right of the viewport */
+    padding: 30px;
+    /* Adds internal spacing inside the body element */
+    overflow-y: scroll;
+    /* Forces a vertical scrollbar, even if not strictly necessary */
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+}
+
+/* Custom styling for the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Sets the width of the scrollbar */
+}
+
+/* Scrollbar track styling */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    /* Adds a subtle shadow inside the track */
+    -webkit-border-radius: 10px;
+    /* Rounds the edges of the track (WebKit-specific) */
+    border-radius: 10px;
+    /* Rounds the edges of the track */
+}
+
+/* Scrollbar thumb (the draggable part) styling */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    /* Rounds the edges of the thumb (WebKit-specific) */
+    border-radius: 10px;
+    /* Rounds the edges of the thumb */
+    background: rgba(255, 0, 0, 0.8);
+    /* Sets a red color with some opacity */
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    /* Adds a shadow inside the thumb */
+}
+
+/* Styling for the scrollbar thumb when the window is inactive */
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 0, 0, 0.4);
+    /* Lightens the red color to indicate inactivity */
+}

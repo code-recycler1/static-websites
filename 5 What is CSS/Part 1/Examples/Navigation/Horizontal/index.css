@@ -1,0 +1,51 @@
+/* Sets the default font for the body element */
+body {
+    font-family: Arial;
+    /* Uses the Arial font for all text in the document */
+}
+
+/* Styles for the unordered list used as a navigation bar */
+ul {
+    list-style-type: none;
+    /* Removes default bullet points from the list */
+    margin: 0;
+    /* Removes default margin for the list */
+    padding: 0;
+    /* Removes default padding for the list */
+    overflow: hidden;
+    /* Ensures the content stays within the bounds of the list container */
+    background-color: #333;
+    /* Sets a dark background for the navigation bar */
+}
+
+/* Individual list items in the navigation bar */
+li {
+    float: left;
+    /* Aligns list items horizontally by floating them to the left */
+}
+
+/* Styles for links inside the navigation bar */
+li a {
+    display: block;
+    /* Ensures links take up the full width of their container */
+    color: white;
+    /* Sets the text color to white for contrast */
+    text-align: center;
+    /* Centers the text within the link */
+    padding: 14px 16px;
+    /* Adds spacing around the link text for a larger clickable area */
+    text-decoration: none;
+    /* Removes the default underline from links */
+}
+
+/* Hover effect for non-active links */
+li a:hover:not(.active) {
+    background-color: #111;
+    /* Darkens the background of links when hovered over */
+}
+
+/* Styling for the active navigation link */
+.active {
+    background-color: #4CAF50;
+    /* Highlights the active link with a green background */
+}

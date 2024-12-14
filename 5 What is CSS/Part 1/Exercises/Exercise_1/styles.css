@@ -1,0 +1,279 @@
+/* Universal reset for margin and box-sizing to ensure consistent layout */
+* {
+    margin: 0px;
+    /* Remove default margin */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width/height */
+}
+
+/* Paragraph styling with spacing and justified text alignment */
+p {
+    margin-top: 10px;
+    /* Add top margin */
+    margin-bottom: 10px;
+    /* Add bottom margin */
+    text-align: justify;
+    /* Justify text to both edges */
+}
+
+/* Body styling with font and background color */
+body {
+    font-family: Arial;
+    /* Set font to Arial */
+    background-color: #e6e6e6;
+    /* Set a light gray background color */
+}
+
+/* Container styling with padding and centered layout */
+.container {
+    margin-top: 10px;
+    /* Add top margin */
+    padding-top: 10px;
+    /* Add padding at the top */
+    width: 70%;
+    /* Set width to 70% of the parent container */
+    margin: auto;
+    /* Center the container horizontally */
+}
+
+/* Content box styling with background color and overflow control */
+.content {
+    margin: 0px;
+    /* Remove margins */
+    padding: 10px;
+    /* Add padding */
+    background-color: #fff;
+    /* Set background color to white */
+    overflow: auto;
+    /* Ensure child content is contained */
+}
+
+/* Responsive image styling to make images scale with the container */
+.responsive-img {
+    width: 100%;
+    /* Make images take up the full width of the container */
+}
+
+/* Unordered list styling for navigation or menu */
+ul {
+    list-style-type: none;
+    /* Remove bullet points */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    overflow: hidden;
+    /* Prevent overflow of list items */
+    background-color: #008693;
+    /* Set a blue background color */
+    border-top-left-radius: 10px;
+    /* Round top-left corners */
+    border-top-right-radius: 10px;
+    /* Round top-right corners */
+    border-bottom: 4px #f04c25 solid;
+    /* Add a solid orange border at the bottom */
+}
+
+/* List item styling for horizontal layout */
+li {
+    float: left;
+    /* Align list items horizontally */
+}
+
+/* Styling for anchor tags inside list items (navigation links) */
+li a {
+    display: block;
+    /* Make the links block elements */
+    color: white;
+    /* Set text color to white */
+    text-align: center;
+    /* Center-align text */
+    padding: 14px 16px;
+    /* Add padding inside the links */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+/* Styling for the "heading" list item (e.g., a prominent menu item) */
+li.heading {
+    display: block;
+    /* Make heading item a block element */
+    color: white;
+    /* Set text color to white */
+    text-align: center;
+    /* Center-align text */
+    padding: 14px 16px;
+    /* Add padding inside the heading */
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: bold;
+    /* Make text bold */
+    /* font-family: Verdana;  /* Optional font-family, commented out */
+}
+
+/* Hover effect for navigation links */
+li a:hover {
+    background-color: #111;
+    /* Change background color on hover */
+}
+
+/* Active link styling for navigation */
+.active {
+    background-color: #f04c25;
+    /* Change background to orange for active links */
+}
+
+/* Footer styling with background color and text alignment */
+.footer {
+    background-color: #008693;
+    /* Set background color to blue */
+    color: #fff;
+    /* Set text color to white */
+    padding: 14px;
+    /* Add padding */
+    font-weight: bold;
+    /* Make text bold */
+    text-align: right;
+    /* Align text to the right */
+    clear: both;
+    /* Clear any floating elements */
+    border-bottom-left-radius: 10px;
+    /* Round bottom-left corners */
+    border-bottom-right-radius: 10px;
+    /* Round bottom-right corners */
+    border-top: 4px #f04c25 solid;
+    /* Add a solid orange border on top */
+}
+
+/* Float-based layout classes for left and right alignment */
+.float-left {
+    float: left;
+    /* Align element to the left */
+}
+
+.float-right {
+    float: right;
+    /* Align element to the right */
+}
+
+/* Content layout for the left section with padding */
+.content-left {
+    width: 60%;
+    /* Set width to 60% of the container */
+    float: left;
+    /* Align to the left */
+    padding-right: 10px;
+    /* Add right padding */
+}
+
+/* Content layout for the right section with padding */
+.content-right {
+    width: 40%;
+    /* Set width to 40% of the container */
+    float: right;
+    /* Align to the right */
+    padding-left: 10px;
+    /* Add left padding */
+}
+
+/* Input and select element styling for uniform appearance */
+input[type=text],
+select {
+    width: 100%;
+    /* Make inputs and select elements full-width */
+    padding: 12px 20px;
+    /* Add padding */
+    margin: 8px 0;
+    /* Add vertical margin */
+    display: inline-block;
+    /* Make them inline-block elements */
+    border: 1px solid #ccc;
+    /* Set a border */
+    border-radius: 4px;
+    /* Add rounded corners */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width/height */
+}
+
+/* Styling for textarea input elements */
+textarea {
+    width: 100%;
+    /* Make textarea full-width */
+    padding: 12px 20px;
+    /* Add padding */
+    margin: 8px 0;
+    /* Add vertical margin */
+    display: inline-block;
+    /* Make it inline-block */
+    border: 1px solid #ccc;
+    /* Set a border */
+    border-radius: 4px;
+    /* Add rounded corners */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width/height */
+}
+
+/* Styling for submit buttons */
+input[type=submit] {
+    width: 100%;
+    /* Make submit button full-width */
+    background-color: #f04c25;
+    /* Set background color to orange */
+    color: white;
+    /* Set text color to white */
+    padding: 14px 20px;
+    /* Add padding */
+    margin: 8px 0;
+    /* Add vertical margin */
+    border: none;
+    /* Remove border */
+    border-radius: 4px;
+    /* Add rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+
+/* Styling for buttons that are anchor tags with type=button */
+a[type=button] {
+    display: block;
+    /* Make the anchor a block element */
+    background-color: #f04c25;
+    /* Set background color to orange */
+    color: white;
+    /* Set text color to white */
+    padding: 14px 20px;
+    /* Add padding */
+    margin: 8px 0;
+    /* Add vertical margin */
+    border: none;
+    /* Remove border */
+    border-radius: 4px;
+    /* Add rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    text-decoration: none;
+    /* Remove underline */
+    text-align: center;
+    /* Center-align text */
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: #45a049;
+    /* Change background to green on hover */
+}
+
+/* Media query for responsive design on screens smaller than 800px */
+@media screen and (max-width: 800px) {
+
+    /* Adjust content layout on smaller screens */
+    .content-left,
+    .content-right {
+        width: 100%;
+        /* Make both sections full-width */
+        padding-right: 0px;
+        /* Remove right padding */
+        padding-left: 0px;
+        /* Remove left padding */
+    }
+}

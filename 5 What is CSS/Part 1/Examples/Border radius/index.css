@@ -1,0 +1,23 @@
+/* Element with a slight rounding of corners */
+#radius25 {
+	border-radius: 25px;
+	/* Applies a small corner radius for subtle rounding */
+}
+
+/* Element with moderate rounding of corners */
+#radius50 {
+	border-radius: 50px;
+	/* Creates more noticeable rounded corners */
+}
+
+/* Element with significant rounding of corners */
+#radius75 {
+	border-radius: 75px;
+	/* Produces prominently rounded corners */
+}
+
+/* Fully rounded element (may appear circular if the element is a square) */
+#radius100 {
+	border-radius: 100px;
+	/* Maximizes rounding, often resulting in a circular shape */
+}

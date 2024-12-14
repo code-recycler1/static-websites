@@ -1,0 +1,25 @@
+/* Body styling */
+body {
+  width: 300px;
+  /* Sets the width of the body to 300px */
+  /* margin: 20px auto; Uncomment this line if you want to center the body horizontally with 20px margin */
+}
+
+/* Circle element styling */
+.circle {
+  display: block;
+  /* Makes the circle element a block-level element (ensures it occupies the full width) */
+  background: black;
+  /* Sets the fallback background color to black */
+  border-radius: 100%;
+  /* Creates a perfectly round shape by rounding the corners */
+  height: 300px;
+  /* Sets the height of the circle to 300px */
+  width: 300px;
+  /* Sets the width of the circle to 300px */
+  margin: 0;
+  /* Removes any default margin around the circle */
+  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+  /* Creates a radial gradient background */
+  /* The gradient starts from the point (100px, 100px) inside the circle and transitions from light blue (#5cabff) to black (#000) */
+}

@@ -1,0 +1,45 @@
+/* Horizontal line with a gradient effect */
+.custom1 {
+    border: 0;
+    /* Removes any default border */
+    height: 1px;
+    /* Creates a thin horizontal line */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    /* Adds a gradient fading to and from transparency, creating a soft effect */
+}
+
+/* Horizontal shadow effect with no visible height */
+.custom2 {
+    border: 0;
+    /* Removes any default border */
+    height: 0;
+    /* No visible height for the element itself */
+    box-shadow: 0 0 10px 1px black;
+    /* Adds a glowing shadow effect */
+    margin-bottom: 30px;
+    /* Creates spacing below the element */
+}
+
+/* Horizontal line with a rounded edge */
+.custom3 {
+    height: 20px;
+    /* Sets the total height of the element */
+    border-style: solid;
+    /* Adds a solid border */
+    border-color: black;
+    /* Sets the border color to black */
+    border-width: 1px 0 0 0;
+    /* Applies the border only to the top of the element */
+    border-radius: 20px;
+    /* Rounds the top border for a pill-shaped effect */
+}
+
+/* Subtle inset shadow effect */
+.custom4 {
+    height: 12px;
+    /* Sets the height of the element */
+    border: 0;
+    /* Removes any default border */
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+    /* Creates a soft inset shadow, fading towards the bottom */
+}

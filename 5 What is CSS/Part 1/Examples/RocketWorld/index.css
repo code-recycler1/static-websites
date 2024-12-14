@@ -1,0 +1,90 @@
+/* Container for the animation */
+.container {
+	width: 300px;
+	/* Sets the fixed width of the container */
+	height: 300px;
+	/* Sets the fixed height of the container */
+	margin: 0 auto;
+	/* Centers the container horizontally */
+	position: relative;
+	/* Establishes a positioning context for child elements */
+	overflow: hidden;
+	/* Hides any overflow content outside the container bounds */
+}
+
+/* Background image of the planet */
+.planet {
+	position: absolute;
+	/* Positions the planet relative to the container */
+	top: 0;
+	/* Aligns the planet with the top edge of the container */
+	left: 0;
+	/* Aligns the planet with the left edge of the container */
+	width: 100%;
+	/* Makes the planet span the full width of the container */
+	height: 100%;
+	/* Makes the planet span the full height of the container */
+	background: url(http://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/planet.png) no-repeat center center;
+	/* Adds the planet image and centers it */
+}
+
+/* Rocket element with orbit animation */
+.rocket {
+	position: absolute;
+	/* Positions the rocket relative to the container */
+	top: 0;
+	/* Aligns the rocket with the top edge of the container */
+	left: 0;
+	/* Aligns the rocket with the left edge of the container */
+	width: 100%;
+	/* Makes the rocket span the full width of the container */
+	height: 100%;
+	/* Makes the rocket span the full height of the container */
+	background: url(http://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/rocket.png) no-repeat 50px center;
+	/* Adds the rocket image and offsets it slightly horizontally */
+
+	/* Adds a continuous rotation animation to the rocket */
+	-webkit-animation: orbit 2s linear infinite;
+	/* Prefix for WebKit browsers */
+	animation: orbit 2s linear infinite;
+	/* Keyframe animation for rotation */
+
+	transition: background-position 0.8s;
+	/* Smooth transition effect for hover state */
+}
+
+/* Change rocket background position on hover */
+.container:hover .rocket {
+	background-position: 80px center;
+	/* Moves the rocket horizontally when the container is hovered */
+}
+
+/* Keyframe animation for WebKit browsers (legacy support) */
+@-webkit-keyframes orbit {
+	from {
+		-webkit-transform: rotate(0deg);
+		/* Starts the rotation at 0 degrees */
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		/* Ends the rotation at 360 degrees */
+	}
+}
+
+/* Keyframe animation for modern browsers */
+@keyframes orbit {
+	from {
+		transform: rotate(0deg);
+		/* Starts the rotation at 0 degrees */
+		-webkit-transform: rotate(0deg);
+		/* Ensures compatibility with WebKit browsers */
+	}
+
+	to {
+		transform: rotate(360deg);
+		/* Ends the rotation at 360 degrees */
+		-webkit-transform: rotate(360deg);
+		/* Ensures compatibility with WebKit browsers */
+	}
+}

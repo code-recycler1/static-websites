@@ -1,0 +1,47 @@
+/* Sets the default font for the body of the document */
+body {
+    font-family: Arial;
+    /* Uses Arial font for a clean and readable appearance */
+}
+
+/* Styles for the vertical navigation menu container */
+ul {
+    list-style-type: none;
+    /* Removes the default bullet points from the list */
+    margin: 0;
+    /* Eliminates any default margin around the list */
+    padding: 0;
+    /* Eliminates any default padding inside the list */
+    width: 200px;
+    /* Sets a fixed width for the vertical navigation menu */
+    background-color: #f1f1f1;
+    /* Light grey background for the menu container */
+}
+
+/* Styles for individual links in the menu */
+li a {
+    display: block;
+    /* Makes each link occupy the full width of its container */
+    color: #000;
+    /* Sets the default text color to black */
+    padding: 8px 0 8px 16px;
+    /* Adds padding inside the link for spacing */
+    text-decoration: none;
+    /* Removes the default underline from links */
+}
+
+/* Styles for the active link (current page) */
+li a.active {
+    background-color: #4CAF50;
+    /* Highlights the active link with a green background */
+    color: white;
+    /* Changes the text color to white for contrast */
+}
+
+/* Hover effect for non-active links */
+li a:hover:not(.active) {
+    background-color: #555;
+    /* Changes the background to a dark grey on hover */
+    color: white;
+    /* Sets the text color to white for contrast during hover */
+}
