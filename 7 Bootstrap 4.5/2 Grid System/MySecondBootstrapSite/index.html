@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="css/custom.css" rel="stylesheet">
+
+	<title>Hello, world!</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- Header with navigation menu-->
+		<div class="row">
+			<div class="col">
+				<h1>Working with the grid system</h1>
+			</div>
+		</div>
+		<!-- Four columns, automatic width 25%-->
+		<div class="row">
+			<div class="col">
+				<h3>Grid system with flexbox</h3>
+				<p>&lt;div class="col"&gt; for completely automatic column width;</p>
+				<p>&lt;div class="col-sm"&gt;, &lt;div class="col-md"&gt;,... for automatic column width and stacking
+					columns if the window width is narrower than the breakpoint indicates;</p>
+				<h3>Rules for the grid system</h3>
+				<ul>
+					<li>Three important parts in the grid: container, row, and col</li>
+					<li>Containers are indicated with the class class="container" or class="container-fluid"</li>
+					<li>The grid system only works correctly if you use rows within a container. A row alone on the page
+						has no effect.</li>
+					<li>Content is placed in columns. Columns must be in a row. Only columns can be children (child
+						elements) in a row.</li>
+					<li>There are column classes for each of the desired widths, indicated with a number from 1-12. If
+						you want four equal columns, use the class .col-sm-3 or similar (because: 4x3 = 12).
+						<ul>
+							<li>
+								Difference with the flexbox system (where you would only use class="col" or
+								class="col-sm") is that you explicitly indicate when you want columns to be stacked.
+								Namely, when the screen becomes narrower than the breakpoint associated with the -sm-*
+								indication (which is between 576px and 768px). Otherwise, you leave the choice to
+								Bootstrap and the browser.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Column widths are calculated in percentages. This way, they always fill 100% of the width of the
+						parent element.
+					</li>
+					<li>Columns have horizontal padding to create white space between the columns</li>
+					<li>
+						There are five levels for the grid. These are extra small (xs), small (sm), medium (md), large
+						(lg), and extra large (xl). Each level has a corresponding responsive breakpoint. See: <a
+							href="https://getbootstrap.com/docs/4.5/layout/grid/"
+							target="_blank">getbootstrap.com/docs/4.5/layout/grid<a>
+
+					</li>
+					<li>
+						The grid levels are based on the minimum width. This means they are applied at the indicated
+						level and all higher levels. For example:
+						<ul>
+							<li>
+								the column width col-sm-4 means that this column is four columns wide on small, medium,
+								large, and extra large screens. On extra small screens, these columns are stacked.
+							</li>
+							<li>
+								the column width col-md-6 means that this column is six columns wide on medium, large,
+								and extra large screens. On small and extra small screens, these columns are stacked.
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<h3>Example 1: horizontal layout stacked on mobile devices</h3>
+				<p><a href="example1.html">Example 1</a></p>
+				<p>Adjust example 1 to a layout with three columns: 3 - 6 - 3</p>
+				<p>Try the following three columns: 3 - 6 - 4</p>
+				<h3>Example 2: layout for mobile and desktop</h3>
+				<p><a href="example2.html">Example 2</a></p>
+				<h3>Example 3: offset for columns</h3>
+				<p><a href="example3.html">Example 3</a></p>
+				<h3>Example 4: nesting columns</h3>
+				<p><a href="example4.html">Example 4</a></p>
+				<p><a href="example4_customcolumnorder.html">Example 4: swap column order</a></p>
+				<h3>Example 5: vertical alignment</h3>
+				<p><a href="example5.html">Example 5</a></p>
+			</div>
+		</div>
+		<!-- Footer -->
+		<div class="row">
+			<div class="col">
+				<footer>
+					<p>Copyright &copy;</p>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

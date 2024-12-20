@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- Accordeon maken met Component Collapse. -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap - Accordeon maken met JavaScript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<!--Collapse  -->
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h2>Een accordeon besturen met JavaScript</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			<h3>Knoppen voor openen/sluiten accordeon</h3>
+			<button class="btn btn-primary btn-block mb-3" id="btnTrouwboeketten">
+				Trouwboeketten
+			</button>
+			<button class="btn btn-primary btn-block mb-3" id="btnGrafstukken">
+				Grafstukken
+			</button>
+			<button class="btn btn-primary btn-block mb-3" id="btnBoeketten">
+				Boeketten
+			</button>
+		</div>
+		<div class="col-6">
+			<h3>Accordeon</h3>
+			<div id="accordeon">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="mb-0">
+							Trouwboeketten
+						</h4>
+					</div>
+					<div id="collapseTrouwboeketten" class="collapse" data-parent="#accordeon">
+						<img class="card-img-top img-fluid" src="img/flower-wedding.jpg" alt="Trouwboeket">
+
+						<div class="card-body">
+							<h4 class="card-title">Trouwboeketten</h4>
+
+							<p class="card-text">
+								Grote selectie trouwboeketten, uiteraard geheel naar wens van het bruidspaar en op de
+								dag zelf bezorgd op locatie.
+							</p>
+							<a href="#" class="btn btn-primary">Bestel</a>
+						</div>
+					</div>
+
+				</div><!-- / card trouwboeketten -->
+				<div class="card">
+					<div class="card-header">
+						<h4 class="mb-0">
+							Grafstukken
+						</h4>
+					</div>
+					<div id="collapseGrafstukken" class="collapse" data-parent="#accordeon">
+						<img class="card-img-top img-fluid" src="img/flower-funeral.jpg" alt="Rouwboeket">
+
+						<div class="card-body">
+							<h4 class="card-title">Grafstukken</h4>
+
+							<p class="card-text">Ook het laatste afscheid wilt u in stijl laten verlopen. Wij helpen met
+								een
+								passende selectie rouwboeketten.</p>
+							<a href="#" class="btn btn-primary">Bestel</a>
+						</div>
+					</div>
+				</div> <!-- / card Grafstukken -->
+				<div class="card">
+					<div class="card-header">
+						<h4 class="mb-0">
+							Boeketten
+						</h4>
+					</div>
+					<div id="collapseBoeketten" class="collapse" data-parent="#accordeon">
+						<img class="card-img-top img-fluid" src="img/flower-general.jpg" alt="Algemeen boeket">
+
+						<div class="card-body">
+							<h4 class="card-title">Boeketten</h4>
+
+							<p class="card-text">Natuurlijk bent u ook welkom voor een gewoon bosje bloemen, omdat het
+								gezellig
+								staat in de huiskamer!</p>
+							<a href="#" class="btn btn-primary">Bestel</a>
+						</div>
+					</div>
+				</div> <!-- / card Boeketten -->
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /container -->
+
+<!-- ******************* -->
+<!-- Scripts -->
+<!-- ******************* -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	//Klik op knoppen aanhaken.
+	// Dit script kan meer generiek worden geschreven in plaats van 1 functie voor elke knop,
+	// maar het principe zal duidelijk zijn.
+	$('#btnTrouwboeketten').on('click', function () {
+		$('#collapseTrouwboeketten').collapse('toggle')
+	});
+	$('#btnGrafstukken').on('click', function () {
+		$('#collapseGrafstukken').collapse('toggle')
+	});
+	$('#btnBoeketten').on('click', function () {
+		$('#collapseBoeketten').collapse('toggle')
+	});
+</script>
+</body>
+</html>

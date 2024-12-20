@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Basis carousel. -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap - Carousel component</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<!--Collapse  -->
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h2>Een Carousel met bijschriften bij de foto's </h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			<div id="carouselBoeketten" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100 img-fluid" src="img/flower-wedding.jpg" alt="Trouwboeket">
+						<div class="carousel-caption d-none d-md-block">
+							Trouwboeketten om elke bruiloft extra feestelijk te maken.
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100 img-fluid" src="img/flower-funeral.jpg" alt="Grafstuk">
+						<div class="carousel-caption d-none d-md-block">
+							Rouwstukken voor een waardig afscheid.
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100 img-fluid" src="img/flower-general.jpg" alt="Algemeen boeket">
+						<div class="carousel-caption d-none d-md-block">
+							Een bloementje brengt altijd sfeer in huis.
+						</div>
+					</div>
+				</div>
+				<!--Controls voor vorige/volgende slide -->
+				<a class="carousel-control-prev" href="#carouselBoeketten" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Vorige</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselBoeketten" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Volgende</span>
+				</a>
+				<!--Indicators die weergeven welke slide actief is -->
+				<ol class="carousel-indicators">
+					<li data-target="#carouselBoeketten" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselBoeketten" data-slide-to="1"></li>
+					<li data-target="#carouselBoeketten" data-slide-to="2"></li>
+				</ol>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /container -->
+
+<!-- ******************* -->
+<!-- Scripts -->
+<!-- ******************* -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

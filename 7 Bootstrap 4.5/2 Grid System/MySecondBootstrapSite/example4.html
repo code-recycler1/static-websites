@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="css/custom.css" rel="stylesheet">
+	<style>
+		/* Light blue section */
+		.blue {
+			height: 400px;
+			/* Set the height of the section to 400px */
+			background-color: #6a8ec4;
+			/* Apply a light blue background color */
+			color: #fff;
+			/* White text color for contrast */
+			font-size: 1.8rem;
+			/* Font size for readability */
+		}
+
+		/* Dark blue section */
+		.darkblue {
+			height: 200px;
+			/* Set the height of the section to 200px */
+			background-color: #373ba8;
+			/* Apply a dark blue background color */
+			color: #fff;
+			/* White text color for contrast */
+			font-size: 1.8rem;
+			/* Font size for readability */
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container" style="border: 1px solid black">
+		<!--Row at the highest level-->
+		<div class="row">
+			<div class="col-md-8 offset-2">
+				<div class="blue">
+					<h2>Main Column</h2>
+					<!--Row at the second level - contains the nested columns-->
+					<div class="row">
+						<div class="col-md-4">
+							<div class="darkblue">
+								<h2>Subcolumn 1</h2>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="darkblue">
+								<h2>Subcolumn 2</h2>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="darkblue">
+								<h2>Subcolumn 3</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

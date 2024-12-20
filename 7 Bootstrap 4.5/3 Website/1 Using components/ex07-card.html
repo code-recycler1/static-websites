@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cards</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<div class="row my-4">
+		<div class="col-4">
+			<!--Voorbeeld 1 -->
+			<div class="card">
+				<h2>Stap 1</h2>
+
+				<p>Een eenvoudige card, zonder extra opmaak</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque aut commodi deleniti dicta
+					ducimus ea impedit iusto magni nam nostrum perspiciatis quo recusandae rem, sed vel veritatis vero
+					voluptatibus.</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<!--Voorbeeld 2, met witruimte -->
+			<div class="card card-body">
+				<h2>Stap 2</h2>
+				<div class="">
+					<p>De klasse .card-body kan ook op de hele card worden toegepast.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque aut commodi deleniti
+						dicta
+						ducimus ea impedit iusto magni nam nostrum perspiciatis quo recusandae rem, sed vel veritatis
+						vero
+						voluptatibus.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<!--Voorbeeld 3, met contextuele klasse -->
+			<div class="card bg-info">
+
+				<h2 class=" card-header">Stap 3</h2>
+				<div class="card-body">
+
+					<p>Met .bg-primary, .bg-secondary enzovoort wordt een contextuele klasse
+						toegevoegd.
+						Dit mag ook alleen voor de header, alleen voor de footer enzovoort.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque aut
+						commodi deleniti
+						dicta
+						ducimus ea impedit iusto magni nam nostrum perspiciatis quo recusandae rem, sed vel veritatis
+						vero
+						voluptatibus.
+					</p>
+					<a href="#" class="btn btn-primary btn-lg">Bestel</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row mb-4">
+		<div class="col-4">
+			<!--Voorbeeld 4, met afbeelding -->
+			<div class="card">
+				<img class="card-img-top img-fluid" src="img/flower-general.jpg" alt="Algemeen boeket">
+
+				<div class="card-body">
+
+					<p>Een card met een afbeelding aan de bovenzijde. De klasse hiervoor is <tt>.card-img-top</tt>.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque aut commodi deleniti
+						dicta ducimus voluptatibus.</p>
+					<a href="#" class="btn btn-primary">Bestel</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<!--Voorbeeld 5 , met afbeelding onderin -->
+			<div class="card">
+
+				<div class="card-body">
+					<p>Een card met afbeelding aan de onderzijde. De klasse hiervoor is <tt>.card-img-bottom</tt>.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque aut commodi deleniti
+						dicta ducimus voluptatibus.</p>
+					<a href="#" class="btn btn-primary">Bestel</a>
+				</div>
+				<img class="card-img-bottom img-fluid" src="img/flower-general.jpg" alt="Algemeen boeket">
+			</div>
+		</div>
+		<div class="col-4">
+
+			<!--Voorbeeld 6 , met afbeelding en witruimte -->
+			<div class="card card-body">
+				<img class="card-img-top img-fluid" src="img/flower-general.jpg" alt="Algemeen boeket">
+
+				<div>
+					<p>Alle inhoud heeft witruimte.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque aut commodi deleniti
+						dicta ducimus voluptatibus.</p>
+					<a href="#" class="btn btn-primary">Bestel</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

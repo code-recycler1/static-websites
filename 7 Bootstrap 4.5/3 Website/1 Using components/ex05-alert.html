@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Alerts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<!--knoppen -->
+	<div class="row">
+		<div class="col">
+			<button data-action="primary" class="btn btn-primary">Primair</button>
+			<button data-action="secondary" class="btn btn-secondary">Secundair</button>
+			<button data-action="success" class="btn btn-success">Success</button>
+			<button data-action="info" class="btn btn-info">Info</button>
+			<button data-action="warning" class="btn btn-warning">Warning</button>
+			<button data-action="danger" class="btn btn-danger">Danger</button>
+			<hr>
+		</div>
+	</div>
+	<!--alert-->
+	<div class="row">
+		<div class="col-6">
+			<div class="alert alert-primary"><strong>Primary Alert!</strong> Dit is de basisweergave van een Alert.</div>
+			<div class="alert alert-secondary"><strong>Secondary Alert!</strong> Dit is de secundaire weergave van een Alert</div>
+			<div class="alert alert-success"><strong>Alert success!</strong> Dat ging goed, nietwaar?</div>
+			<div class="alert alert-info"><strong>Alert info!</strong> Lees de algemene voorwaarden goed door.</div>
+			<div class="alert alert-warning"><strong>Alert warning!</strong> Wilt u de bestanden echt verwijderen?</div>
+			<div class="alert alert-danger"><strong>Alert danger!</strong> Geen geldig e-mailadres ingevuld.</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function () {
+		// Verberg eerst alle alerts
+		$('.alert').hide();
+		$('.btn').on('click', function () {
+			var action = $(this).data('action');
+			$('.alert').hide();
+			// toon aangeklikte alert
+			$('.alert-' + action).show(400);
+		})
+	});
+</script>
+</body>
+</html>

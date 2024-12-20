@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Modal maken en openen met JavaScript. -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-3">
+			<!--Algemene tekst -->
+			<h4>Trouwboeketten</h4>
+			<fieldset class="form-group">
+				Gewenste aantal trouwboeketten a EUR 14,95:
+				<input type="number" id="txtAantal" class="form-control" placeholder="Aantal boeketten...">
+				<button type="button" class="btn btn-primary" id="btnBerekenen">
+					Berekenen
+				</button>
+			</fieldset>
+			<div id="orderTotal"></div>
+		</div>
+	</div>
+</div>
+<!-- /container -->
+
+<!-- Inhoud van de Modal dialog, buiten de container (niet verplicht, maar voor het overzicht-->
+<div class="modal fade" id="mijnModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Trouwboeketten</h4>
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<img class="img-fluid" src="img/flower-wedding.jpg" alt="Trouwboeket">
+				<h3>
+					Uw bestelling: <span id="spanAantal"></span> boeketten; <br>
+					totaal: &euro; <span id="spanTotaal"></span>
+				</h3>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+				<button type="button" class="btn btn-primary" id="btnOrder">Bestellen</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ******************* -->
+<!-- Scripts -->
+<!-- ******************* -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	$(document).ready(function () {
+		var total = 0;
+		$('#btnBerekenen').on('click', function () {
+			// 1. Eerst aantal en totaalprijs berekenen en tonen in de Modal
+			var prijs = 14.95;
+			var aantal = $('#txtAantal').val();
+			total = (prijs * aantal).toFixed(2);
+			$('#spanAantal').text(aantal);
+			$('#spanTotaal').text(total);
+			$('#orderTotal').empty();
+
+			// 2. Vervolgens Modal openen via script
+			$('#mijnModal').modal('show');
+		});
+
+		$('#btnOrder').on('click', function () {
+			// 1. Modal weer verbergen, totaalbedrag tonen in de pagina.
+			// In werkelijkheid zult u hier de (database)bestelling gaan plaatsen.
+			$('#mijnModal').modal('hide');
+			$('#orderTotal').append('<h3>Bestellen, totaalbedrag: EUR ' + total + '</h3>');
+		})
+	})
+</script>
+</body>
+</html>

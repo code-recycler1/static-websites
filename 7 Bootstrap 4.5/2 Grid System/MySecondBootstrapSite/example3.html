@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		/* Blue section with lighter shade */
+		.blue {
+			height: 200px;
+			/* Set the height of the element */
+			background-color: #6a8ec4;
+			/* Light blue background color */
+			color: #fff;
+			/* White text color for contrast */
+			font-size: 1.8rem;
+			/* Set font size to 1.8 rem for readability */
+		}
+
+		/* Blue section with darker shade */
+		.darkblue {
+			height: 200px;
+			/* Set the height of the element */
+			background-color: #373ba8;
+			/* Dark blue background color */
+			color: #fff;
+			/* White text color for contrast */
+			font-size: 1.8rem;
+			/* Set font size to 1.8 rem for readability */
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 offset-2">
+				<div class="blue">
+					<h2>This column is centered</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="darkblue">
+					<h2>This column is aligned to the left</h2>
+				</div>
+			</div>
+			<div class="col-md-4 offset-4">
+				<div class="darkblue">
+					<h2>This column is offset by four columns to the right.</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

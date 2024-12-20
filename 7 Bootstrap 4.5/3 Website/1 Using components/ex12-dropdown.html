@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Dropdowns</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-6">
+			<h2>Dropdown</h2>
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Bloemen</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+					   aria-haspopup="true" aria-expanded="false">
+						Boeketten</a>
+					<!--Het dropdownmenu is in eerste instantie verborgen -->
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Trouwboeketten</a>
+						<a class="dropdown-item" href="#">Moederdag</a>
+						<a class="dropdown-item" href="#">Geslaagd</a>
+						<a class="dropdown-item" href="#">Verjaardag</a>
+
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Anders</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Winkel</a>
+				</li>
+			</ul>
+			<hr>
+
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

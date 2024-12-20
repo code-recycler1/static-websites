@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Component Collapse. -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap - Collapse</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Gebruik van de klasse .collapsing, plaats uit commentaar -->
+<!--     <style>
+        .collapsing {
+            background-color: lightgoldenrodyellow;
+        }
+    </style> -->
+</head>
+<body>
+<!--Collapse  -->
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h2>De component Collapse</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-4">
+			<!--Knop om het collapsible panel te openen en te sluiten  -->
+			<button class="btn btn-success" data-toggle="collapse"
+					data-target="#divTrouwboeketten">Trouwboeketten
+			</button>
+			<div class="collapse" id="divTrouwboeketten" style="border:1px solid black; padding: 1rem;">
+				<h4>Trouwboeketten</h4>
+				<img class="img-fluid" src="img/flower-wedding.jpg" alt="Trouwboeket">
+				<p>
+					Grote selectie trouwboeketten, uiteraard geheel naar wens van het bruidspaar en op de
+					dag zelf bezorgd op locatie.
+				</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<!--Knop om het collapsible panel te openen en te sluiten  -->
+			<button class="btn btn-success" data-toggle="collapse"
+					data-target="#divGrafstukken">Grafstukken
+			</button>
+			<div class="collapse" id="divGrafstukken" style="border:1px solid black; padding: 1rem;">
+				<h4>Grafstukken</h4>
+
+				<img class="card-img-top img-fluid" src="img/flower-funeral.jpg" alt="Rouwboeket">
+				<p>
+					Ook het laatste afscheid wilt u in stijl laten verlopen. Wij helpen met een
+					passende selectie rouwboeketten.
+				</p>
+			</div>
+
+		</div>
+		<div class="col-4">
+			<!--Hier is een <a href> gebruikt in plaats van <button>. Let op het ontbreken van data-target -->
+			<a href="#divBoeketten" class="btn btn-success" data-toggle="collapse">
+				Boeketten
+			</a>
+			<div class="collapse" id="divBoeketten" style="border:1px solid black; padding: 1rem;">
+				<h4>Boeketten</h4>
+
+				<img class="card-img-top img-fluid" src="img/flower-general.jpg" alt="Algemeen boeket">
+				<p>
+					Natuurlijk bent u ook welkom voor een gewoon bosje bloemen, omdat het
+					gezellig staat in de huiskamer!
+				</p>
+
+
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- /container -->
+
+<!-- ******************* -->
+<!-- Scripts -->
+<!-- ******************* -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+
+</script>
+</body>
+</html>

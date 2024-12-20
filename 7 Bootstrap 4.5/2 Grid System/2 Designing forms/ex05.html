@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Forms in a Grid</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2>Form in a grid</h2>
+				<form>
+					<div class="form-group row">
+						<label for="username" class="col-3 text-right">
+							Username:
+						</label>
+						<div class="col-9">
+							<input type="text" id="username" class="form-control" placeholder="Username">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="email" class="col-3 text-right">
+							Email:
+						</label>
+						<div class="col-9">
+							<input type="email" id="email" class="form-control" placeholder="Email address">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-9 offset-3">
+							<button class="btn btn-primary">Sign Up</button>
+							<button class="btn btn-outline-secondary">Cancel</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>List group</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<!--Standaard list group -->
+			<h2>Bloemen van het seizoen</h2>
+			<ul class="list-group">
+				<li class="list-group-item">Tulp</li>
+				<li class="list-group-item">Narcis</li>
+				<li class="list-group-item">Krokus</li>
+				<li class="list-group-item">Sneeuwklokje</li>
+				<li class="list-group-item">Hyacinth</li>
+			</ul>
+			<hr>
+			<!--list group met active eerste rij (kopcel)-->
+			<ul class="list-group">
+				<li class="list-group-item active"><h2>Bloemen van het seizoen</h2></li>
+				<li class="list-group-item">Tulp <span class="badge badge-info float-right">43</span></li>
+				<li class="list-group-item">Narcis <span class="badge badge-info float-right">8</span></li>
+				<li class="list-group-item">Krokus <span class="badge badge-info float-right">19</span></li>
+				<li class="list-group-item">Sneeuwklokje <span class="badge badge-info float-right">52</span></li>
+				<li class="list-group-item">Hyacinth <span class="badge badge-info float-right">3</span></li>
+			</ul>
+
+			<hr>
+			<h2>Koppelingen: geen ul en li nodig</h2>
+			<!--list group voor een div. Geen ul en li nodig-->
+			<div class="list-group">
+				<a href="tulp.html" class="list-group-item">Tulp</a>
+				<a href="narcis.html" class="list-group-item">Narcis</a>
+				<a href="#" class="list-group-item">Krokus</a>
+				<a href="#" class="list-group-item">Sneeuwklokje</a>
+				<a href="#" class="list-group-item">Hyacinth</a>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="css/custom.css" rel="stylesheet">
+	<style>
+		/* Section with a light blue background */
+		.blue {
+			height: 400px;
+			/* Set the height to 400px */
+			background-color: #6a8ec4;
+			/* Light blue background color */
+			color: #fff;
+			/* White text color for contrast */
+			font-size: 1.8rem;
+			/* Font size set to 1.8 rem for readability */
+		}
+
+		/* Section with a dark blue background */
+		.darkblue {
+			height: 400px;
+			/* Set the height to 400px */
+			background-color: #373ba8;
+			/* Dark blue background color */
+			color: #fff;
+			/* White text color for contrast */
+			font-size: 1.8rem;
+			/* Font size set to 1.8 rem for readability */
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container" style="border: 1px solid black">
+		<!--Row at the highest level-->
+		<div class="row">
+			<div class="col-md-9 order-12">
+				<div class="blue">
+					<h2>1. Nine columns wide</h2>
+					<p>But shifted to the right with .order-12</p>
+				</div>
+			</div>
+			<div class="col-md-3 order-1">
+				<div class="darkblue">
+					<h2>2. Three columns wide</h2>
+					<p>But shifted to the left with .order-1</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Nav</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-6">
+			<h2>Standaard navigatiemenu</h2>
+			<ul class="nav">
+				<li class="nav-item"><a class="nav-link" href="#">Bloemen</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Boeketten</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Winkel</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Over ons</a></li>
+				<li class="nav-item"><a class="nav-link disabled" href="#">Inactief (disabled)</a></li>
+			</ul>
+			<hr>
+			<h2>Verticaal navigatiemenu</h2>
+			<ul class="nav flex-column">
+				<li class="nav-item"><a class="nav-link" href="#">Bloemen</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Boeketten</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Winkel</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Over ons</a></li>
+			</ul>
+			<hr>
+			<h2>Tabs (alleen opmaak)</h2>
+			<ul class="nav nav-tabs">
+				<li class="nav-item"><a href="#" class="nav-link active">Bloemen</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Boeketten</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Winkel</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Over ons</a></li>
+			</ul>
+			<hr>
+			<h2>Pills</h2>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="#" class="nav-link">Bloemen</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Boeketten</a></li>
+				<li class="nav-item"><a href="#" class="nav-link active">Winkel</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Over ons</a></li>
+			</ul>
+			<hr>
+			<!--********************-->
+			<!-- Vanaf hier: tabbladen met inhoud, geselecteerde tab wordt zichtbaar als er op wordt geklikt. -->
+			<!--********************-->
+			<h2>Tabbladen (werkend) met inhoud</h2>
+			<!--De tabbladen/menulijst-->
+			<ul class="nav nav-tabs">
+				<li class="nav-item"><a data-toggle="tab" role="tab" href="#bloemen" class="nav-link active">Bloemen</a>
+				</li>
+				<li class="nav-item"><a data-toggle="tab" role="tab" href="#boeketten" class="nav-link">Boeketten</a>
+				</li>
+				<li class="nav-item"><a data-toggle="tab" role="tab" href="#winkel" class="nav-link">Winkel</a></li>
+				<li class="nav-item"><a data-toggle="tab" role="tab" href="#overons" class="nav-link">Over ons</a></li>
+			</ul>
+			<!--Tab panels-->
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="bloemen"><h2>Bloemen</h2>
+
+					<p>bloemen ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis corporis,
+						debitis
+						deleniti dolore eligendi exercitationem illo illum iste magnam maxime quam quibusdam quisquam
+						quo repellendus saepe sint, sunt, voluptatem?</p></div>
+				<div class="tab-pane fade" id="boeketten"><h2>Boeketten</h2>
+
+					<p>boeketten ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis corporis,
+						debitis
+						deleniti dolore eligendi exercitationem illo illum iste magnam maxime quam quibusdam quisquam
+						quo repellendus saepe sint, sunt, voluptatem?</p></div>
+				<div class="tab-pane fade" id="winkel"><h2>Winkel</h2>
+
+					<p>Winkel ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis corporis, debitis
+						deleniti dolore eligendi exercitationem illo illum iste magnam maxime quam quibusdam quisquam
+						quo repellendus saepe sint, sunt, voluptatem?</p></div>
+				<div class="tab-pane fade" id="overons"><h2>Over Ons</h2>
+
+					<p>Over ons ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis corporis,
+						debitis
+						deleniti dolore eligendi exercitationem illo illum iste magnam maxime quam quibusdam quisquam
+						quo repellendus saepe sint, sunt, voluptatem?</p></div>
+			</div>
+			<hr>
+
+
+			<!--********************-->
+			<!-- Vanaf hier: idem, maar dan met pills. -->
+			<!--********************-->
+			<h2>Pills (werkend) met inhoud</h2>
+			<!--De tabbladen/menulijst-->
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a data-toggle="tab" role="tab" href="#pill-bloemen" class="nav-link active">Bloemen</a>
+				</li>
+				<li class="nav-item"><a data-toggle="tab" role="tab" href="#pill-boeketten" class="nav-link">Boeketten</a>
+				</li>
+				<li class="nav-item"><a data-toggle="tab" role="tab" href="#pill-winkel" class="nav-link">Winkel</a></li>
+				<li class="nav-item"><a data-toggle="tab" role="tab" href="#pill-overons" class="nav-link">Over ons</a></li>
+			</ul>
+			<!--Tab panels-->
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="pill-bloemen"><h2>Bloemen</h2>
+
+					<p>bloemen ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis corporis,
+						debitis
+						deleniti dolore eligendi exercitationem illo illum iste magnam maxime quam quibusdam quisquam
+						quo repellendus saepe sint, sunt, voluptatem?</p></div>
+				<div class="tab-pane fade" id="pill-boeketten"><h2>Boeketten</h2>
+
+					<p>boeketten ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis corporis,
+						debitis
+						deleniti dolore eligendi exercitationem illo illum iste magnam maxime quam quibusdam quisquam
+						quo repellendus saepe sint, sunt, voluptatem?</p></div>
+				<div class="tab-pane fade" id="pill-winkel"><h2>Winkel</h2>
+
+					<p>Winkel ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis corporis, debitis
+						deleniti dolore eligendi exercitationem illo illum iste magnam maxime quam quibusdam quisquam
+						quo repellendus saepe sint, sunt, voluptatem?</p></div>
+				<div class="tab-pane fade" id="pill-overons"><h2>Over Ons</h2>
+
+					<p>Over ons ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis corporis,
+						debitis
+						deleniti dolore eligendi exercitationem illo illum iste magnam maxime quam quibusdam quisquam
+						quo repellendus saepe sint, sunt, voluptatem?</p></div>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

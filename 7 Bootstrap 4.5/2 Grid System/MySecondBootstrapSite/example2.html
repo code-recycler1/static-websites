@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Layout for both small and medium screens</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-8">
+				<!-- On small screens: full width.
+				On medium screens and larger: 8 columns -->
+				<div style="height: 300px; background-color: #6a8ec4"></div>
+			</div>
+			<div class="col-12 col-md-4">
+				<!-- On small screens: half the width.
+				 On medium screens and larger: 4 columns (together with 8 from
+				 the previous row, this makes 12) -->
+				<div style="height: 300px; background-color: #373ba8"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
