@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Container styled as a flexbox */
+    .flex-container {
+      display: flex;
+      /* Enables flexbox layout for child elements */
+      background-color: DodgerBlue;
+      /* Sets the background color of the container */
+    }
+
+    /* Styling for child elements inside the flex container */
+    .flex-container>div {
+      background-color: orange;
+      /* Sets the background color for each flex item */
+      margin: 10px;
+      /* Adds spacing around each flex item */
+      padding: 20px;
+      /* Adds inner spacing inside each flex item */
+      font-size: 30px;
+      /* Sets the font size for text within each flex item */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div>Lorem ipsum</div>
+    <div>Lorem</div>
+    <div>Lorem ipsum dipsum frutsum pixum dixum</div>
+  </div>
+
+  <div class="flex-container" style="margin-top: 10px;">
+    <div>Lorem ipsum</div>
+    <div>Lorem</div>
+    <div>Lorem ipsum dipsum frutsum pixum dixum</div>
+    <div>Lorem ipsum</div>
+    <div>Lorem</div>
+    <div>Lorem ipsum dipsum frutsum pixum dixum</div>
+  </div>
+
+  <p>A flex layout requires a parent element with the display property set to flex.</p>
+  <p>All direct child elements of the flexible parent container automatically become flex items.</p>
+  <p>Note that the elements do not start a second row if the browser window is too small.</p>
+</body>
+
+</html>

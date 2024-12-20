@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Resets box model to include padding and border in element's width and height */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Sets the default font and removes the browser's default margin */
+        body {
+            font-family: Arial;
+            /* Clean and simple sans-serif font */
+            margin: 0;
+            /* Eliminates default margin for consistent layout */
+        }
+
+        /* Header styles: includes background, spacing, and text alignment */
+        .header {
+            padding: 60px;
+            /* Provides ample space inside the header */
+            text-align: center;
+            /* Centers text horizontally */
+            background: #009CAB;
+            /* Vibrant background color */
+            color: white;
+            /* Contrasts text color for readability */
+        }
+
+        /* Navbar styles: creates a horizontal navigation bar */
+        .navbar {
+            display: flex;
+            /* Arranges navigation links in a row */
+            background-color: #333;
+            /* Dark background for contrast */
+        }
+
+        /* Navbar links: defines text appearance and spacing */
+        .navbar a {
+            color: white;
+            /* Text color for contrast */
+            padding: 14px 20px;
+            /* Spacing around each link */
+            text-decoration: none;
+            /* Removes underline */
+            text-align: center;
+            /* Centers link text */
+        }
+
+        /* Navbar hover effect: changes link appearance on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            /* Lightens background on hover */
+            color: black;
+            /* Darkens text color on hover */
+        }
+
+        /* Row container: defines a flexbox layout for the main content area */
+        .row {
+            display: flex;
+            /* Creates a flexible layout for child elements */
+            flex-wrap: wrap;
+            /* Allows wrapping to the next line on smaller screens */
+        }
+
+        /* Sidebar styles: allocates 30% of the row width for the sidebar */
+        .side {
+            flex: 30%;
+            /* Sidebar occupies 30% of the row's width */
+            background-color: #f1f1f1;
+            /* Light gray background */
+            padding: 20px;
+            /* Adds internal spacing */
+        }
+
+        /* Main content styles: allocates 70% of the row width for the main area */
+        .main {
+            flex: 70%;
+            /* Main content occupies 70% of the row's width */
+            background-color: white;
+            /* Neutral background for content */
+            padding: 20px;
+            /* Adds internal spacing */
+        }
+
+        /* Placeholder image block styles */
+        .fakeimg {
+            background-color: #aaa;
+            /* Gray background as a placeholder */
+            width: 100%;
+            /* Fills the width of its container */
+            padding: 20px;
+            /* Adds spacing inside the block */
+        }
+
+        /* Footer styles: centers content and applies background styling */
+        .footer {
+            padding: 20px;
+            /* Adds spacing inside the footer */
+            text-align: center;
+            /* Centers footer text */
+            background: #ddd;
+            /* Light gray background */
+        }
+
+        /* Responsive design: adjusts layout for smaller screens */
+        @media screen and (max-width: 700px) {
+
+            /* Stacks rows and navbar items vertically */
+            .row,
+            .navbar {
+                flex-direction: column;
+                /* Changes layout to vertical stacking */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Note -->
+    <div style="background:#DE3D17;color:white;padding:5px">
+        <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Flexbox</h1>
+        <p>With a <b>flexible</b> layout.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Menu 1</a>
+        <a href="#">Menu 2</a>
+        <a href="#">Menu 3</a>
+        <a href="#">Menu 4</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
+            <h2>About Me</h2>
+            <h5>Photo of me:</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <h3>More Text</h3>
+            <p>Lorem ipsum dolor sit ame.</p>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div>
+        </div>
+        <div class="main">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2021</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+            <br>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2021</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+</body>
+
+</html>

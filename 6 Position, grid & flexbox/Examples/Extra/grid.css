@@ -1,0 +1,143 @@
+/* Define custom properties (CSS variables) for consistent use across the layout */
+:root {
+    --main-radius: 5px;
+    /* Set the border radius to apply rounded corners */
+    --main-padding: 5px;
+    /* Set the padding for borders */
+}
+
+/* Container for the entire layout */
+.container {
+    display: grid;
+    /* Use CSS Grid for layout */
+    height: 100vh;
+    /* Set the container to take the full viewport height */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Create four equal-width columns */
+    grid-template-rows: 0.2fr 1.2fr 1.2fr 0.8fr;
+    /* Define row heights in relative units */
+    grid-template-areas: "nav nav nav nav"
+        /* Navigation spans all columns */
+        "sidebar main main main"
+        /* Sidebar takes the first column, main content takes the next three */
+        "sidebar content1 content2 content3"
+        /* Sidebar on the left, content sections on the right */
+        "footer footer footer footer";
+    /* Footer spans all columns */
+    grid-gap: 0.4rem;
+    /* Add space between grid items */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Set the font */
+    text-transform: uppercase;
+    /* Make all text uppercase */
+    text-align: center;
+    /* Center align text */
+}
+
+/* Styles for the navigation bar */
+nav {
+    grid-area: nav;
+    /* Assigns this element to the "nav" grid area */
+    background-color: teal;
+    /* Set background color */
+    border-radius: var(--main-radius);
+    /* Apply rounded corners using the custom radius */
+    border-top: var(--main-padding);
+    /* Apply padding on the top of the border */
+}
+
+/* Styles for the main content area */
+main {
+    grid-area: main;
+    /* Assigns this element to the "main" grid area */
+    background-color: teal;
+    /* Set background color */
+    border-radius: var(--main-radius);
+    /* Apply rounded corners */
+    border-top: var(--main-padding);
+    /* Padding on the top */
+}
+
+/* Styles for the sidebar */
+#sidebar {
+    grid-area: sidebar;
+    /* Assigns this element to the "sidebar" grid area */
+    background-color: gold;
+    /* Set background color */
+    border-radius: var(--main-radius);
+    /* Apply rounded corners */
+    border-top: var(--main-padding);
+    /* Padding on the top */
+}
+
+/* Styles for the first content section */
+#content1 {
+    grid-area: content1;
+    /* Assigns this element to the "content1" grid area */
+    background-color: darkblue;
+    /* Set background color */
+    border-radius: var(--main-radius);
+    /* Apply rounded corners */
+    border-top: var(--main-padding);
+    /* Padding on the top */
+}
+
+/* Styles for the second content section */
+#content2 {
+    grid-area: content2;
+    /* Assigns this element to the "content2" grid area */
+    background-color: salmon;
+    /* Set background color */
+    border-radius: var(--main-radius);
+    /* Apply rounded corners */
+    border-top: var(--main-padding);
+    /* Padding on the top */
+}
+
+/* Styles for the third content section */
+#content3 {
+    grid-area: content3;
+    /* Assigns this element to the "content3" grid area */
+    background-color: rebeccapurple;
+    /* Set background color */
+    border-radius: var(--main-radius);
+    /* Apply rounded corners */
+    border-top: var(--main-padding);
+    /* Padding on the top */
+}
+
+/* Styles for the footer */
+footer {
+    grid-area: footer;
+    /* Assigns this element to the "footer" grid area */
+    background-color: firebrick;
+    /* Set background color */
+    border-radius: var(--main-radius);
+    /* Apply rounded corners */
+    border-top: var(--main-padding);
+    /* Padding on the top */
+}
+
+/* Responsive layout for screens smaller than 700px */
+@media only screen and (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+        /* Stack columns into a single column */
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        /* Adjust row heights to be more flexible */
+        grid-template-areas: "nav"
+            /* Navigation takes full width */
+            "sidebar"
+            /* Sidebar takes full width */
+            "main"
+            /* Main content takes full width */
+            "content1"
+            /* First content section takes full width */
+            "content2"
+            /* Second content section takes full width */
+            "content3"
+            /* Third content section takes full width */
+            "footer";
+        /* Footer takes full width */
+    }
+}

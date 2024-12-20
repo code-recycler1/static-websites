@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* The container with relative positioning */
+    div.relative {
+      position: relative;
+      /* This positions the element relative to its normal position in the document */
+      width: 400px;
+      /* Defines the width of the container */
+      height: 200px;
+      /* Defines the height of the container */
+      border: 3px solid #73AD21;
+      /* Adds a green border to the container */
+    }
+
+    /* The child element with absolute positioning */
+    div.absolute {
+      position: absolute;
+      /* This positions the element relative to its nearest positioned ancestor (here, it's positioned within .relative) */
+      top: 50px;
+      /* Moves the element 50px from the top of the .relative container */
+      right: 0;
+      /* Aligns the element to the right edge of the .relative container */
+      width: 200px;
+      /* Defines the width of the absolutely positioned element */
+      height: 100px;
+      /* Defines the height of the absolutely positioned element */
+      border: 3px solid #73AD21;
+      /* Adds a green border to the absolutely positioned element */
+    }
+  </style>
+</head>
+
+<body>
+  <h2>position: absolute;</h2>
+
+  <div class="relative">This div element has position: relative;
+    <div class="absolute">This div element has position: absolute;</div>
+  </div>
+</body>
+
+</html>

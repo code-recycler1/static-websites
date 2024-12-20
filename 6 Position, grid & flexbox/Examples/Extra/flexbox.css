@@ -1,0 +1,115 @@
+/* Universal styles to apply box-sizing and remove default margin */
+* {
+    margin: 0px;
+    /* Removes default margin from all elements */
+    box-sizing: border-box;
+    /* Ensures padding and borders are included in element's total width and height */
+}
+
+/* Body styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Sets the font for the page */
+    justify-content: flex;
+    /* This is invalid and has no effect in the body element. 'justify-content' is used in flex containers */
+}
+
+/* Styles for the top header section */
+.topheader {
+    background-color: red;
+    /* Red background for the top header */
+    color: white;
+    /* White text color */
+    padding: 10px;
+    /* Adds padding around the top header */
+}
+
+/* Center-aligns the text inside the h4 element in the top header */
+.topheader h4 {
+    text-align: center;
+}
+
+/* Main header styles */
+.header {
+    padding: 70px;
+    /* Adds space inside the header */
+    background-color: royalblue;
+    /* Sets a royal blue background color */
+    color: white;
+    /* White text color */
+    text-align: center;
+    /* Centers the text inside the header */
+}
+
+/* Navbar styles for horizontal navigation */
+.navbar {
+    display: flex;
+    /* Applies flexbox layout to the navbar */
+    background-color: black;
+    /* Black background for the navbar */
+}
+
+/* Styles for the navbar links */
+.navbar a {
+    color: white;
+    /* White text color */
+    text-decoration: none;
+    /* Removes the default underline */
+    padding: 10px 20px;
+    /* Adds padding inside each link */
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+    background-color: white;
+    /* Changes background to white on hover */
+    color: black;
+    /* Changes text color to black on hover */
+}
+
+/* Flex container for row layout */
+.row {
+    display: flex;
+    /* Applies flexbox layout */
+    flex-wrap: wrap;
+    /* Allows the flex items to wrap to new lines when necessary */
+}
+
+/* Styles for the side column */
+.side {
+    flex: 30%;
+    /* Makes the side column take up 30% of the row's width */
+    padding: 20px;
+    /* Adds padding inside the side column */
+    background-color: #f1f1f1;
+    /* Light gray background color */
+}
+
+/* Styles for the main content area */
+.main {
+    flex: 70%;
+    /* Makes the main content area take up 70% of the row's width */
+    padding: 20px;
+    /* Adds padding inside the main content area */
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    /* Centers the text inside the footer */
+    background-color: gray;
+    /* Gray background color */
+    padding: 20px;
+    /* Adds padding inside the footer */
+}
+
+/* Media query to adjust layout for smaller screen sizes */
+@media screen and (max-width: 700px) {
+
+    /* Stacks the navbar and row items vertically on smaller screens */
+    .navbar,
+    .row {
+        flex-direction: column;
+        /* Changes layout from horizontal to vertical for smaller screens */
+    }
+}

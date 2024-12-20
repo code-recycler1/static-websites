@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<style>
+  /* Applies box-sizing to include padding and border in element's total width/height calculations */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Base styling for the body */
+  body {
+    margin: 0;
+    /* Removes default margin for clean layout */
+    font-family: Arial;
+    /* Sets a consistent sans-serif font */
+  }
+
+  /* Styling for the page header */
+  .header {
+    text-align: center;
+    /* Centers text horizontally */
+    padding: 32px;
+    /* Adds spacing around the header content */
+  }
+
+  /* Container for creating a responsive row layout with images */
+  .row {
+    display: flex;
+    /* Enables flexbox layout */
+    flex-wrap: wrap;
+    /* Wraps columns to the next row if needed */
+    padding: 0 4px;
+    /* Adds horizontal spacing within the row */
+  }
+
+  /* Individual column styling */
+  .column {
+    flex: 25%;
+    /* Default column width (4 columns per row) */
+    max-width: 25%;
+    /* Prevents columns from exceeding 25% width */
+    padding: 0 4px;
+    /* Adds spacing between columns */
+  }
+
+  /* Styling for images within each column */
+  .column img {
+    margin-top: 8px;
+    /* Adds spacing between stacked images */
+    vertical-align: middle;
+    /* Aligns images to the middle line of the container */
+  }
+
+  /* Responsive design for medium screens (up to 800px wide) */
+  @media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      /* Adjusts to 2 columns per row */
+      max-width: 50%;
+      /* Ensures columns don't exceed 50% width */
+    }
+  }
+
+  /* Responsive design for small screens (up to 600px wide) */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      /* Adjusts to 1 column per row */
+      max-width: 100%;
+      /* Ensures columns take full width of the row */
+    }
+  }
+</style>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h1>Responsive image grid</h1>
+    <p>Resize the browser window to see the responsive effect.</p>
+  </div>
+
+  <!-- Photo Grid -->
+  <div class="row">
+    <div class="column">
+      <img src="img/andy.jpg" style="width:100%">
+      <img src="img/brady.jpg" style="width:100%">
+      <img src="img/jeremy.jpg" style="width:100%">
+      <img src="img/luis.jpg" style="width:100%">
+      <img src="img/ryan.jpg" style="width:100%">
+      <img src="img/trace.jpg" style="width:100%">
+      <img src="img/valentina.jpg" style="width:100%">
+      <img src="img/zami.jpg" style="width:100%">
+    </div>
+
+    <div class="column">
+      <img src="img/josh.jpg" style="width:100%">
+      <img src="img/zami.jpg" style="width:100%">
+      <img src="img/valentina.jpg" style="width:100%">
+      <img src="img/luis.jpg" style="width:100%">
+      <img src="img/jeremy.jpg" style="width:100%">
+      <img src="img/ryan.jpg" style="width:100%">
+      <img src="img/sean.jpg" style="width:100%">
+      <img src="img/brady.jpg" style="width:100%">
+    </div>
+
+    <div class="column">
+      <img src="img/sean.jpg" style="width:100%">
+      <img src="img/trace.jpg" style="width:100%">
+      <img src="img/jeremy.jpg" style="width:100%">
+      <img src="img/andy.jpg" style="width:100%">
+      <img src="img/brady.jpg" style="width:100%">
+      <img src="img/valentina.jpg" style="width:100%">
+      <img src="img/andy.jpg" style="width:100%">
+    </div>
+
+    <div class="column">
+      <img src="img/luis.jpg" style="width:100%">
+      <img src="img/valentina.jpg" style="width:100%">
+      <img src="img/ryan.jpg" style="width:100%">
+      <img src="img/jeremy.jpg" style="width:100%">
+      <img src="img/ryan.jpg" style="width:100%">
+      <img src="img/josh.jpg" style="width:100%">
+      <img src="img/brady.jpg" style="width:100%">
+    </div>
+  </div>
+</body>
+
+</html>

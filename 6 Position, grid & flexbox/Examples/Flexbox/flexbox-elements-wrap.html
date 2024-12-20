@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Flex container setup */
+    .flex-container {
+      display: flex;
+      /* Defines a flex container for flexible layout */
+      flex-wrap: wrap;
+      /* Allows items to wrap to the next line if needed */
+      background-color: DodgerBlue;
+      /* Sets the background color for the container */
+    }
+
+    /* Styling for child elements inside the flex container */
+    .flex-container>div {
+      background-color: orange;
+      /* Sets the background color for flex items */
+      margin: 10px;
+      /* Adds spacing around each flex item */
+      padding: 20px;
+      /* Adds inner spacing inside each flex item */
+      font-size: 30px;
+      /* Sets a larger font size for the text */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div>Lorem ipsum</div>
+    <div>Lorem</div>
+    <div>Lorem ipsum dipsum frutsum pixum dixum</div>
+  </div>
+
+  <div class="flex-container" style="margin-top: 10px;">
+    <div>Lorem ipsum</div>
+    <div>Lorem</div>
+    <div>Lorem ipsum dipsum frutsum pixum dixum</div>
+    <div>Lorem ipsum</div>
+    <div>Lorem</div>
+    <div>Lorem ipsum dipsum frutsum pixum dixum</div>
+  </div>
+
+  <p>A flex layout requires a parent element with the display property set to flex.</p>
+  <p>All direct child elements of the flexible parent container automatically become flex items.</p>
+  <p>» flex-wrap: wrap - When the browser window is not large enough, the elements will use a new row to display the
+    content.</p>
+</body>
+
+</html>

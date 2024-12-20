@@ -1,0 +1,92 @@
+/* Remove default margin and padding for the body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply common styles to all direct child elements of .grid-container */
+.grid-container>* {
+    background: #1e1f26;
+    /* Set background color */
+    color: #fff;
+    /* Set text color to white */
+    display: flex;
+    /* Use flexbox for centering content */
+    align-items: center;
+    /* Vertically center the content */
+    justify-content: center;
+    /* Horizontally center the content */
+    border-radius: 7px;
+    /* Add rounded corners to each grid item */
+    font-weight: 700;
+    /* Make text bold */
+}
+
+/* Grid container styling */
+.grid-container {
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    border: 20px solid #fff;
+    /* Add a 20px white border around the container */
+    font-size: 2em;
+    /* Set the base font size to 2em */
+    font-family: sans-serif;
+    /* Use a sans-serif font */
+    display: grid;
+    /* Use CSS grid layout */
+    height: 100vh;
+    /* Set the container height to 100% of the viewport height */
+    width: 100vw;
+    /* Set the container width to 100% of the viewport width */
+    grid-gap: 10px;
+    /* Add a 10px gap between grid items */
+    grid-template-areas:
+        /* Define grid layout with named areas */
+        "header header header header"
+        /* Header spans all columns */
+        "aside main main main"
+        /* Aside occupies the first column, main spans 3 columns */
+        "aside main main main"
+        /* Aside occupies the first column, main spans 3 columns */
+        "aside main main main"
+        /* Aside occupies the first column, main spans 3 columns */
+        "footer footer footer footer";
+    /* Footer spans all columns */
+    grid-template-columns: 200px 1fr;
+    /* Set the first column (aside) to 200px, the second (main) to 1 fraction of the available space */
+    grid-template-rows: 175px auto 75px;
+    /* Define the row sizes (header 175px, main 1fr, footer 75px) */
+    margin: 0 auto;
+    /* Center the grid container horizontally */
+}
+
+/* Header styles */
+.header {
+    grid-area: header;
+    /* Place this element in the 'header' grid area */
+    background-color: rgb(0, 140, 255);
+    /* Set header background to a blue color */
+}
+
+/* Aside styles */
+.aside {
+    grid-area: aside;
+    /* Place this element in the 'aside' grid area */
+    background-color: rgb(1, 175, 68);
+    /* Set aside background to a green color */
+}
+
+/* Main content styles */
+.main {
+    grid-area: main;
+    /* Place this element in the 'main' grid area */
+    /* No background or extra styles, so it takes the default style */
+}
+
+/* Footer styles */
+.footer {
+    grid-area: footer;
+    /* Place this element in the 'footer' grid area */
+    background-color: rgb(230, 139, 3);
+    /* Set footer background to an orange color */
+}

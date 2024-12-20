@@ -1,0 +1,77 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background image for the HTML body and ensure it covers the entire viewport */
+html {
+    background: url(Start\ files/images/compass.jpg) no-repeat center center fixed;
+    /* Set the background image, fixed and centered */
+    -webkit-background-size: cover;
+    /* Ensure the background covers the whole screen in Webkit browsers (e.g. Chrome, Safari) */
+    -moz-background-size: cover;
+    /* Ensure the background covers the whole screen in Firefox */
+    -o-background-size: cover;
+    /* Ensure the background covers the whole screen in Opera */
+    background-size: cover;
+    /* Ensure the background covers the whole screen for modern browsers */
+}
+
+/* Style for the labels (compass direction names) */
+.label {
+    font-family: 'Indie Flower', cursive;
+    /* Use a handwritten cursive font for the label */
+    font-size: 28px;
+    /* Set the font size */
+    color: white;
+    /* Set the font color to white */
+}
+
+/* Position the 'north' label at the top center of the screen */
+.north {
+    position: absolute;
+    /* Use absolute positioning */
+    top: 10px;
+    /* Position 10px from the top of the screen */
+    left: 50%;
+    /* Position horizontally at the center */
+    transform: translate(-50%, 0);
+    /* Adjust the positioning to truly center the element horizontally */
+}
+
+/* Position the 'south' label at the bottom center of the screen */
+.south {
+    position: absolute;
+    /* Use absolute positioning */
+    bottom: 10px;
+    /* Position 10px from the bottom of the screen */
+    left: 50%;
+    /* Position horizontally at the center */
+    transform: translate(-50%, 0);
+    /* Adjust the positioning to truly center the element horizontally */
+}
+
+/* Position the 'east' label at the center-right of the screen */
+.east {
+    position: absolute;
+    /* Use absolute positioning */
+    top: 50%;
+    /* Position vertically at the center */
+    right: 10px;
+    /* Position 10px from the right edge of the screen */
+    transform: translate(0, -50%);
+    /* Adjust the positioning to truly center the element vertically */
+}
+
+/* Position the 'west' label at the center-left of the screen */
+.west {
+    position: absolute;
+    /* Use absolute positioning */
+    left: 10px;
+    /* Position 10px from the left edge of the screen */
+    top: 50%;
+    /* Position vertically at the center */
+    transform: translate(0, -50%);
+    /* Adjust the positioning to truly center the element vertically */
+}

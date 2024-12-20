@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Defines a grid container with 3 columns and variable row heights */
+    .grid-container {
+      display: grid;
+      /* Enables grid layout */
+      grid-gap: 30px 30px;
+      /* Sets the gap between rows and columns (30px each) */
+      grid-template-columns: auto auto auto;
+      /* Defines 3 columns with automatic width based on content */
+      /* grid-template-rows: 80px 200px;  Unused commented-out code for defining rows */
+      background-color: #2196F3;
+      /* Sets a blue background for the grid container */
+      padding: 10px;
+      /* Adds padding inside the container */
+    }
+
+    /* Styles for the individual grid items */
+    .grid-container>div {
+      background-color: lightgreen;
+      /* Sets the background color for each grid item */
+      border: 1px solid black;
+      /* Adds a black border around each item */
+      padding: 20px;
+      /* Adds padding inside each grid item */
+      font-size: 30px;
+      /* Increases font size inside each item */
+      text-align: center;
+      /* Centers the text inside each grid item */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>The grid</h1>
+
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+    <div class="grid-item">10</div>
+    <div class="grid-item">11</div>
+    <div class="grid-item">12</div>
+  </div>
+</body>
+
+</html>

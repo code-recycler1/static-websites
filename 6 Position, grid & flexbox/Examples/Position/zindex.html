@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Style for the image element */
+    img {
+      position: absolute;
+      /* Positions the image absolutely relative to its nearest positioned ancestor (not static) */
+      left: 0px;
+      /* Positions the image 0px from the left edge of its containing element */
+      top: 0px;
+      /* Positions the image 0px from the top edge of its containing element */
+      z-index: -1;
+      /* Places the image behind other elements (elements with a higher z-index will appear above) */
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Welcome at Thomas More</h1>
+  <img src="tm.png" height="250">
+  <p>
+    The image has a z-index of -1 and will therefore be placed behind the text. By default, the z-index of HTML elements
+    is set to 0.
+  </p>
+
+</body>
+
+</html>
