@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <title>John Doe | Custom Styles</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="description" content="Portfolio website of John Doe">
+    <meta name="keywords" content="John Doe, Portfolio, Programming">
+</head>
+
+<body>
+    <div class="header">
+        <h1>JOHN DOE</h1>
+        <p>"In the end, we only regret the chances we didn't take."</p>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="topnav">
+        <ul>
+            <li><a href="index.html">| Home</a></li>
+            <li><a href="about.html">| About</a></li>
+            <li><a href="education.html">| Education</a></li>
+            <li><a href="job-experience.html">| Job Experience</a></li>
+            <li><a href="contact.html">| Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="custom">
+            <h1>Custom Styles</h1>
+            <p>This page documents the design system and custom styles applied to the website.</p>
+
+            <section>
+                <h2>Design System</h2>
+                <h3>Variables</h3>
+                <p>The website uses CSS custom properties for consistent styling:</p>
+                <ul>
+                    <li>Colors: Primary, secondary, text, accent</li>
+                    <li>Spacing: 8px base unit with sm(16px), md(24px), lg(32px)</li>
+                    <li>Typography: System font stack with responsive base size</li>
+                    <li>Effects: Transitions, shadows, and border radius</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Color Scheme</h2>
+                <p>The website uses a carefully selected color palette:</p>
+                <ul>
+                    <li>Primary: var(--primary-color) - Used for main elements</li>
+                    <li>Secondary: var(--secondary-color) - Used for backgrounds</li>
+                    <li>Text: var(--text-color) - Main text color</li>
+                    <li>Accent: var(--accent-color) - Highlights and decorative elements</li>
+                </ul>
+                <p>Dark mode automatically adjusts these colors for better visibility.</p>
+            </section>
+
+            <section>
+                <h2>Layout Components</h2>
+                <h3>Grid System</h3>
+                <p>Responsive grid layouts using:</p>
+                <ul>
+                    <li>Container with max-width: min(1200px, 95vw)</li>
+                    <li>Grid gap: 24px (var(--spacing-md))</li>
+                    <li>Flexible columns with minmax()</li>
+                </ul>
+
+                <h3>Components</h3>
+                <ul>
+                    <li>Navigation: Sticky header with hover effects</li>
+                    <li>Cards: Certification and skill cards with shadows</li>
+                    <li>Timeline: Visual history for experience</li>
+                    <li>Forms: Enhanced input styling and validation</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Responsive Design</h2>
+                <p>The website adapts to different screen sizes:</p>
+                <ul>
+                    <li>Mobile-first approach</li>
+                    <li>Breakpoint at 768px for layout changes</li>
+                    <li>Flexible grids and images</li>
+                    <li>Collapsible navigation menu</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Accessibility Features</h2>
+                <ul>
+                    <li>Semantic HTML structure</li>
+                    <li>ARIA attributes where needed</li>
+                    <li>Focus states and keyboard navigation</li>
+                    <li>Reduced motion preferences support</li>
+                    <li>Color contrast compliance</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Performance Optimizations</h2>
+                <ul>
+                    <li>System font stack for better loading</li>
+                    <li>Responsive images</li>
+                    <li>Efficient CSS selectors</li>
+                    <li>Print stylesheet support</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; <time id="current-year">2021</time> John Doe. All rights reserved.</p>
+        <span aria-hidden="true">-</span>
+        <a href="custom.html">Custom Styles</a>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

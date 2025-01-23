@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <title>John Doe | About</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="description" content="Portfolio website of John Doe">
+    <meta name="keywords" content="John Doe, Portfolio, Programming">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <h1>JOHN DOE</h1>
+        <p>"The only limit to our realization of tomorrow is our doubts of today."</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="topnav">
+        <ul>
+            <li><a href="index.html">| Home</a></li>
+            <li><a class="active" href="about.html">| About</a></li>
+            <li><a href="education.html">| Education</a></li>
+            <li><a href="job-experience.html">| Job Experience</a></li>
+            <li><a href="contact.html">| Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" role="main">
+        <article class="about">
+            <h1>About Me</h1>
+
+            <p class="lead">
+                Web developer with a passion for creating interactive experiences. Specializing in frontend development
+                with a strong foundation in modern web technologies.
+            </p>
+
+            <section class="profile-section" aria-labelledby="profile-title">
+                <h2 id="profile-title">Professional Profile</h2>
+                <div class="certification-card">
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <p>
+                                My name is John Doe, and I am a web developer with a passion for creating interactive
+                                websites. I graduated with a degree in Computer Science from XYZ University and enjoy
+                                learning new technologies.
+                            </p>
+                        </div>
+                        <figure>
+                            <img src="img/profile.jpg" alt="John Doe - Professional Portrait" class="profile-image">
+                            <figcaption>John Doe - Web Developer</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hobbies-section" aria-labelledby="hobbies-title">
+                <h2 id="hobbies-title">My Hobbies</h2>
+                <nav class="hobbies-nav" aria-label="Hobbies navigation">
+                    <ul class="hobbies-list">
+                        <li><a href="#fitness" class="cta-button">Fitness</a></li>
+                        <li><a href="#running" class="cta-button">Running</a></li>
+                        <li><a href="#football" class="cta-button">Football</a></li>
+                        <li><a href="#gaming" class="cta-button">Gaming</a></li>
+                        <li><a href="#djing" class="cta-button">DJing</a></li>
+                        <li><a href="#gardening" class="cta-button">Gardening</a></li>
+                    </ul>
+                </nav>
+
+                <div class="certification-grid">
+                    <article id="fitness" class="certification-card">
+                        <h3>Fitness</h3>
+                        <figure class="hobby-image">
+                            <img src="img/fitness.jpg" alt="Home Gym Setup">
+                        </figure>
+                        <ul class="achievement-list">
+                            <li>Regular gym workouts and strength training</li>
+                            <li>Balanced diet and nutrition planning</li>
+                            <li>Yoga and flexibility training</li>
+                        </ul>
+                    </article>
+
+                    <article id="running" class="certification-card">
+                        <h3>Running</h3>
+                        <figure class="hobby-image">
+                            <img src="img/running.jpg" alt="Trail Running">
+                        </figure>
+                        <ul class="achievement-list">
+                            <li>Marathon training and participation</li>
+                            <li>Trail running enthusiast</li>
+                            <li>Active running club member</li>
+                        </ul>
+                    </article>
+
+                    <article id="football" class="certification-card">
+                        <h3>Football</h3>
+                        <figure class="hobby-image">
+                            <img src="img/football.jpg" alt="Football">
+                        </figure>
+                        <ul class="achievement-list">
+                            <li>Team play and cooperation</li>
+                            <li>Watching and analyzing matches</li>
+                            <li>Participating in local tournaments</li>
+                        </ul>
+                    </article>
+
+                    <article id="gaming" class="certification-card">
+                        <h3>Gaming</h3>
+                        <figure class="hobby-image">
+                            <img src="img/gaming.jpg" alt="Call of Duty">
+                        </figure>
+                        <ul class="achievement-list">
+                            <li>Strategy games for problem-solving</li>
+                            <li>Action games for stress relief</li>
+                            <li>Online multiplayer with friends</li>
+                        </ul>
+                    </article>
+
+                    <article id="djing" class="certification-card">
+                        <h3>DJing</h3>
+                        <figure class="hobby-image">
+                            <img src="img/dj-equipment.jpg" alt="DJ Equipment">
+                        </figure>
+                        <ul class="achievement-list">
+                            <li>Mixing tracks and creating playlists</li>
+                            <li>Performing live at local events</li>
+                            <li>Music production and experimentation</li>
+                        </ul>
+                    </article>
+
+                    <article id="gardening" class="certification-card">
+                        <h3>Gardening</h3>
+                        <figure class="hobby-image">
+                            <img src="img/gardening.jpg" alt="Gardening">
+                        </figure>
+                        <ul class="achievement-list">
+                            <li>Growing vegetables and flowers</li>
+                            <li>Mastering various gardening techniques</li>
+                            <li>Sharing work on social media and clubs</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; <time id="current-year">2021</time> John Doe. All rights reserved.</p>
+        <p aria-hidden="true">-</p>
+        <a href="custom.html">Custom Styles</a>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

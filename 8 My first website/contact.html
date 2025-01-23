@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <title>John Doe | Contact</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="description" content="Portfolio website of John Doe">
+    <meta name="keywords" content="John Doe, Portfolio, Programming">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <h1>JOHN DOE</h1>
+        <p>"Success is not the key to happiness. Happiness is the key to success."</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="topnav">
+        <ul>
+            <li><a href="index.html">| Home</a></li>
+            <li><a href="about.html">| About</a></li>
+            <li><a href="education.html">| Education</a></li>
+            <li><a href="job-experience.html">| Job Experience</a></li>
+            <li><a class="active" href="contact.html">| Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" role="main">
+        <div class="contact">
+            <h1>Contact Me</h1>
+            <div class="contact-container">
+                <form action="#" method="post" id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="required">Name</label>
+                        <input type="text" id="name" name="name" required aria-describedby="nameError"
+                            pattern="[A-Za-z\s]{2,}" autocomplete="name">
+                        <div id="nameError" class="error-message" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="required">Email</label>
+                        <input type="email" id="email" name="email" required aria-describedby="emailError"
+                            autocomplete="email">
+                        <div id="emailError" class="error-message" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="required">Subject</label>
+                        <input type="text" id="subject" name="subject" required aria-describedby="subjectError">
+                        <div id="subjectError" class="error-message" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="required">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            aria-describedby="messageError"></textarea>
+                        <div id="messageError" class="error-message" aria-live="polite"></div>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Send Message</span>
+                        <span class="button-loader" hidden></span>
+                    </button>
+                </form>
+
+                <aside class="contact-info">
+                    <img src="img/telephone.jpg" alt="Contact information" class="contact-image">
+                    <div class="contact-details">
+                        <h2>Other Ways to Reach Me</h2>
+                        <p>Feel free to reach out through the form or any of these channels:</p>
+                        <ul class="contact-list">
+                            <li>Email: <a href="mailto:contact@johndoe.com">contact@johndoe.com</a></li>
+                            <li>Phone: (555) 123-4567</li>
+                            <li>LinkedIn: @johndoe</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; <time id="current-year">2021</time> John Doe. All rights reserved.</p>
+        <p aria-hidden="true">-</p>
+        <a href="custom.html">Custom Styles</a>
+    </footer>
+
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        const form = document.getElementById('contactForm');
+        const submitButton = form.querySelector('.submit-button');
+
+        function showError(input, message) {
+            const errorDiv = document.getElementById(`${input.id}Error`);
+            errorDiv.textContent = message;
+            input.setAttribute('aria-invalid', 'true');
+        }
+
+        function clearError(input) {
+            const errorDiv = document.getElementById(`${input.id}Error`);
+            errorDiv.textContent = '';
+            input.removeAttribute('aria-invalid');
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Clear previous errors
+            form.querySelectorAll('input, textarea').forEach(clearError);
+
+            // Validate email
+            const email = form.email;
+            if (!email.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/)) {
+                showError(email, 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            // Validate required fields
+            form.querySelectorAll('[required]').forEach(input => {
+                if (!input.value.trim()) {
+                    showError(input, `${input.previousElementSibling.textContent} is required`);
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                submitButton.disabled = true;
+                submitButton.querySelector('.button-text').hidden = true;
+                submitButton.querySelector('.button-loader').hidden = false;
+
+                // Simulate form submission
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
+                // Reset form
+                form.reset();
+                submitButton.disabled = false;
+                submitButton.querySelector('.button-text').hidden = false;
+                submitButton.querySelector('.button-loader').hidden = true;
+                alert('Message sent successfully!');
+            }
+        });
+    </script>
+</body>
+
+</html>

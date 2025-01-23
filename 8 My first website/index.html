@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <title>John Doe | Home</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="description"
+        content="Portfolio website of John Doe - Web Developer specializing in interactive experiences">
+    <meta name="keywords" content="John Doe, Portfolio, Web Development, Programming">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <h1>JOHN DOE</h1>
+        <p class="tagline">"Strive not to be a success, but rather to be of value."</p>
+    </header>
+
+    <nav class="topnav">
+        <ul>
+            <li><a class="active" href="index.html">| Home</a></li>
+            <li><a href="about.html">| About</a></li>
+            <li><a href="education.html">| Education</a></li>
+            <li><a href="job-experience.html">| Job Experience</a></li>
+            <li><a href="contact.html">| Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" role="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Web Developer & Designer</h2>
+                <p class="hero-text">Creating engaging digital experiences through clean code and thoughtful design</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button primary">Get in Touch</a>
+                    <a href="job-experience.html" class="cta-button secondary">View My Work</a>
+                </div>
+            </div>
+            <img src="img/welcome.jpg" alt="Modern workspace with computer and development tools" class="hero-image"
+                loading="lazy" width="600" height="400">
+        </section>
+
+        <!-- Introduction Grid -->
+        <section class="intro-grid">
+            <article class="intro-card">
+                <h3>About Me</h3>
+                <p>Computer Science graduate from XYZ University with a passion for web development and creating
+                    interactive experiences.</p>
+                <a href="about.html" class="read-more">Learn More →</a>
+            </article>
+
+            <article class="intro-card">
+                <h3>My Expertise</h3>
+                <p>Specializing in frontend development with strong skills in HTML, CSS, JavaScript, and modern
+                    frameworks.</p>
+                <a href="job-experience.html" class="read-more">View Skills →</a>
+            </article>
+
+            <article class="intro-card">
+                <h3>Latest Projects</h3>
+                <p>Check out my recent work and see how I bring ideas to life through code and creativity.</p>
+                <a href="job-experience.html" class="read-more">See Projects →</a>
+            </article>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="featured-section">
+            <h2>What I Do</h2>
+            <div class="features-grid">
+                <article class="feature">
+                    <h3>Web Development</h3>
+                    <p>Building responsive and performant websites using modern technologies.</p>
+                </article>
+                <article class="feature">
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and engaging user interfaces and experiences.</p>
+                </article>
+                <article class="feature">
+                    <h3>Performance</h3>
+                    <p>Optimizing websites for speed and accessibility.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; <time id="current-year">2021</time> John Doe. All rights reserved.</p>
+        <p aria-hidden="true">-</p>
+        <a href="custom.html">Custom Styles</a>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

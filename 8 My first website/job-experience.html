@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+    <title>John Doe | Job Experience</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="description" content="Portfolio website of John Doe">
+    <meta name="keywords" content="John Doe, Portfolio, Programming">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <h1>JOHN DOE</h1>
+        <p>"The only way to do great work is to love what you do."</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="topnav">
+        <ul>
+            <li><a href="index.html">| Home</a></li>
+            <li><a href="about.html">| About</a></li>
+            <li><a href="education.html">| Education</a></li>
+            <li><a class="active" href="job-experience.html">| Job Experience</a></li>
+            <li><a href="contact.html">| Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" role="main">
+        <article class="job-experience">
+            <h1 class="page-title">Professional Experience</h1>
+
+            <div class="intro">
+                <p class="lead">
+                    I am a web developer with 3+ years of experience creating engaging and user-friendly websites.
+                    My expertise spans from front-end development to responsive design implementation.
+                </p>
+            </div>
+
+            <section class="experience-section" aria-labelledby="skills-heading">
+                <h2 id="skills-heading">Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Technical Skills</h3>
+                        <ul class="skill-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript & Modern Frameworks</li>
+                            <li>Responsive Design</li>
+                            <li>Version Control (Git)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Soft Skills</h3>
+                        <ul class="skill-list">
+                            <li>Project Management</li>
+                            <li>Team Collaboration</li>
+                            <li>Problem Solving</li>
+                            <li>Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experience-timeline" aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Work History</h2>
+
+                <div class="timeline">
+                    <article class="timeline-entry">
+                        <header class="timeline-header">
+                            <time class="timeline-date" datetime="2020-06">June 2020 - Present</time>
+                            <h3>Web Developer Intern</h3>
+                            <p class="company">ABC Company</p>
+                        </header>
+                        <div class="timeline-content">
+                            <ul class="achievement-list">
+                                <li>Developed and maintained company websites using modern web technologies</li>
+                                <li>Collaborated with design team to implement new features</li>
+                                <li>Improved site performance by 40% through optimization techniques</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry">
+                        <header class="timeline-header">
+                            <time class="timeline-date" datetime="2019">2019 - Present</time>
+                            <h3>Freelance Web Developer</h3>
+                        </header>
+                        <div class="timeline-content">
+                            <ul class="achievement-list">
+                                <li>Created custom websites for small businesses</li>
+                                <li>Managed multiple projects simultaneously</li>
+                                <li>Provided ongoing maintenance and support</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="cta-section">
+                <a href="doc/resume.pdf" class="cta-button" download>
+                    <span class="button-text">Download Full Resume</span>
+                    <svg aria-hidden="true" class="icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                    </svg>
+                </a>
+            </aside>
+        </article>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; <time id="current-year">2021</time> John Doe. All rights reserved.</p>
+        <p aria-hidden="true">-</p>
+        <a href="custom.html">Custom Styles</a>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
