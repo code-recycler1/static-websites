@@ -2,13 +2,13 @@
 
 ### Exercise 1  
 
-1. Open the starting file **exercise_x.html** in Visual Studio Code.  
+1. Open the starting file `exercise_x.html` in Visual Studio Code.  
 2. Try to replicate the following page as accurately as possible.
 
 ![Exercise 1 Image 1](./Screenshots/Exercise_1-1.png)  
 
 **Additional information:**
-- The image **compass.jpg** is a background image.  
+- The image `compass.jpg` is a background image.  
 - The divs (labels) should have a nice handwritten font. Search for a fun font via Google Fonts.  
 - Create 4 classes (north, south, etc.) and give them the appropriate positioning.  
 **Challenge:**  
@@ -18,7 +18,7 @@
 
 ### Exercise 2  
 
-1. Open the starting file **exercise_x.html** in Visual Studio Code.  
+1. Open the starting file `exercise_x.html` in Visual Studio Code.  
 2. Try to replicate the following page as accurately as possible.
 
 ![Exercise 2 Image 1](./Screenshots/Exercise_2-1.png)  
