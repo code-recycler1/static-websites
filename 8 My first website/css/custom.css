@@ -2,32 +2,51 @@
 :root {
     /* Colors */
     --primary-color: #000000;
+    /* Main brand color, used for headers, buttons, etc. */
     --secondary-color: #ffffff;
+    /* Secondary color, often used for backgrounds or contrasting elements */
     --text-color: #333333;
+    /* Default text color */
     --accent-color: #666666;
+    /* Accent color for borders, highlights, etc. */
     --success-color: #2ecc71;
+    /* Color for success messages or indicators */
     --error-color: #e74c3c;
+    /* Color for error messages or indicators */
 
     /* Spacing - Using more standard values */
     --spacing-unit: 8px;
+    /* Base unit for spacing calculations */
     --spacing-sm: 16px;
+    /* Small spacing, e.g., between elements */
     --spacing-md: 24px;
+    /* Medium spacing, e.g., padding inside containers */
     --spacing-lg: 32px;
+    /* Large spacing, e.g., margins between sections */
 
     /* Layout */
     --container-width: min(1200px, 95vw);
+    /* Maximum width of the main container */
     --grid-gap: var(--spacing-md);
+    /* Gap between grid items */
 
     /* Typography */
     --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Main font stack */
     --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    /* Responsive base font size */
     --line-height: 1.6;
+    /* Default line height for readability */
 
     /* Effects */
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Default transition for hover/focus effects */
     --border-radius: 8px;
+    /* Default border radius for rounded corners */
     --box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+    /* Default box shadow for depth */
     --focus-ring: 0 0 0 3px rgb(0 0 0 / 0.2);
+    /* Focus ring for accessibility */
 }
 
 /* CSS Reset - Normalize browser defaults */
@@ -35,22 +54,32 @@
 *::before,
 *::after {
     margin: 0;
+    /* Remove default margin */
     padding: 0;
+    /* Remove default padding */
     box-sizing: border-box;
+    /* Ensure padding and border are included in element dimensions */
 }
 
 /* Base HTML Elements - Core styling */
 html {
     scroll-behavior: var(--scroll-behavior);
+    /* Smooth scrolling for the entire page */
 }
 
 body {
     font-family: var(--font-main);
-    line-height: 1.6;
+    /* Apply the main font stack */
+    line-height: var(--line-height);
+    /* Set default line height */
     color: var(--text-color);
+    /* Set default text color */
     min-height: 100vh;
+    /* Ensure the body takes at least the full viewport height */
     display: flex;
+    /* Use flexbox for layout */
     flex-direction: column;
+    /* Stack children vertically */
 }
 
 /* Typography Scale - Heading and text styles */
@@ -59,61 +88,91 @@ h2,
 h3,
 h4 {
     margin-bottom: var(--spacing-sm);
+    /* Consistent bottom margin for headings */
     line-height: 1.2;
+    /* Tighter line height for headings */
 }
 
 p {
     margin-bottom: var(--spacing-sm);
+    /* Consistent bottom margin for paragraphs */
 }
 
 /* Layout Container - Main content wrapper */
 .container {
     max-width: var(--container-width);
+    /* Constrain container width */
     margin: 0 auto;
+    /* Center the container horizontally */
     padding: var(--spacing-md);
+    /* Add padding inside the container */
     flex: 1;
+    /* Allow the container to grow and fill available space */
 }
 
 /* Header Component - Site header styling */
 .header {
     background-color: var(--secondary-color);
+    /* Set header background color */
     padding: var(--spacing-md);
+    /* Add padding inside the header */
     text-align: center;
+    /* Center-align header content */
     border-bottom: 1px solid var(--accent-color);
+    /* Add a bottom border */
 }
 
 .header h1 {
     font-size: 2.5rem;
+    /* Large font size for the main heading */
     margin-bottom: var(--spacing-sm);
+    /* Add spacing below the heading */
 }
 
 .header p {
     font-size: 1.25rem;
+    /* Slightly larger font size for the subtitle */
     font-style: italic;
+    /* Italicize the subtitle */
 }
 
 /* Navigation Bar - Responsive menu */
 .topnav {
     display: flex;
+    /* Use flexbox for layout */
     justify-content: center;
+    /* Center-align navigation items */
     flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
     background-color: var(--primary-color);
+    /* Set navigation background color */
     padding: 0;
+    /* Remove default padding */
     text-align: center;
+    /* Center-align text */
     position: sticky;
+    /* Make the navigation sticky */
     top: 0;
+    /* Stick to the top of the viewport */
     z-index: 100;
+    /* Ensure the navigation is above other content */
 }
 
 .topnav ul {
     list-style: none;
     /* Remove default bullet points */
     margin: 0;
+    /* Remove default margin */
     padding: 0;
+    /* Remove default padding */
     display: flex;
+    /* Use flexbox for layout */
     flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
     justify-content: center;
+    /* Center-align items */
     width: 100%;
+    /* Take up full width */
 }
 
 .topnav li {
@@ -124,852 +183,1235 @@ p {
 /* Navigation Links - Interactive states */
 .topnav a {
     color: var(--secondary-color);
+    /* Set link text color */
     text-decoration: none;
+    /* Remove underline from links */
     padding: var(--spacing-sm) var(--spacing-md);
+    /* Add padding to links */
     font-size: 1.25rem;
+    /* Set font size for links */
     display: inline-block;
+    /* Ensure links behave like blocks */
     transition: var(--transition);
+    /* Add smooth transition for hover effects */
     position: relative;
+    /* Enable positioning for pseudo-elements */
 }
 
 .topnav a::after {
     content: '';
+    /* Add a pseudo-element for the underline effect */
     position: absolute;
+    /* Position the pseudo-element */
     bottom: 0;
+    /* Align to the bottom of the link */
     left: 50%;
+    /* Center the pseudo-element horizontally */
     width: 0;
+    /* Start with no width */
     height: 2px;
+    /* Set the height of the underline */
     background: var(--secondary-color);
+    /* Set the underline color */
     transition: all var(--transition);
+    /* Add smooth transition for the underline */
     transform: translateX(-50%);
+    /* Center the pseudo-element */
 }
 
 .topnav a:hover::after,
 .topnav a.active::after {
     width: 100%;
+    /* Expand the underline on hover or when active */
 }
 
 .topnav a:hover {
     background-color: var(--accent-color);
+    /* Change background color on hover */
     color: var(--secondary-color);
+    /* Ensure text remains visible */
 }
 
 .topnav a.active {
     background-color: var(--secondary-color);
+    /* Change background color for active link */
     color: var(--primary-color);
+    /* Change text color for active link */
 }
 
 /* Mobile Navigation - Small screen adaptations */
 @media screen and (max-width: 768px) {
     .topnav ul {
         flex-direction: column;
+        /* Stack items vertically on small screens */
         align-items: stretch;
+        /* Stretch items to full width */
     }
 
     .topnav li {
         width: 100%;
+        /* Make each list item full width */
     }
 
     .topnav a {
         text-align: center;
+        /* Center-align text */
         border-bottom: 1px solid var(--accent-color);
+        /* Add a bottom border */
         display: block;
+        /* Make links block-level */
         padding: calc(var(--spacing-md) / 2);
+        /* Reduce padding for smaller screens */
     }
 
     .topnav a:last-child {
         border-bottom: none;
+        /* Remove border from the last link */
     }
 }
 
 /* Image Handling - Responsive images and containers */
 img {
     max-width: 100%;
+    /* Ensure images don't exceed their container width */
     height: auto;
+    /* Maintain aspect ratio */
     display: block;
+    /* Remove inline spacing */
     margin-bottom: var(--spacing-sm);
+    /* Add spacing below images */
 }
 
 .index img {
     max-width: 600px;
+    /* Constrain image width */
     width: 100%;
+    /* Ensure images are responsive */
     margin: 0 auto var(--spacing-md);
+    /* Center images and add spacing */
 }
 
 /* Grid System - Flexible column layouts */
 .column {
     float: left;
+    /* Float columns for older grid layouts */
     width: 33.33%;
+    /* Set column width */
     padding: var(--spacing-sm);
+    /* Add padding inside columns */
 }
 
 .row::after {
     content: "";
+    /* Clear floats */
     display: table;
+    /* Ensure the row clears floated children */
     clear: both;
+    /* Clear floats */
 }
 
 /* Footer Component - Site footer styling */
 footer {
     background-color: var(--primary-color);
+    /* Set footer background color */
     color: var(--secondary-color);
+    /* Set footer text color */
     padding: var(--spacing-md);
+    /* Add padding inside the footer */
     text-align: center;
+    /* Center-align footer content */
     margin-top: auto;
+    /* Push the footer to the bottom of the page */
 }
 
 footer p,
 footer span {
     margin: var(--spacing-sm) 0;
+    /* Add spacing around footer text */
 }
 
 footer a {
     color: var(--secondary-color);
+    /* Set link text color */
     text-decoration: none;
+    /* Remove underline from links */
     transition: var(--transition);
+    /* Add smooth transition for hover effects */
 }
 
 footer a:hover {
     text-decoration: underline;
+    /* Add underline on hover */
     opacity: 0.8;
+    /* Reduce opacity on hover */
 }
 
 /* Utility Classes - Reusable helpers */
 .text-center {
     text-align: center;
+    /* Center-align text */
 }
 
 .mb-1 {
     margin-bottom: var(--spacing-sm);
+    /* Small bottom margin */
 }
 
 .mb-2 {
     margin-bottom: var(--spacing-md);
+    /* Medium bottom margin */
 }
 
 .mb-3 {
     margin-bottom: var(--spacing-lg);
+    /* Large bottom margin */
 }
 
 /* Form Elements - Input styling and validation */
 .form-group {
     margin-bottom: var(--spacing-md);
+    /* Add spacing between form groups */
 }
 
 input,
 textarea,
 select {
     width: 100%;
+    /* Make inputs full width */
     padding: 0.75rem;
+    /* Add padding inside inputs */
     border: 1px solid var(--accent-color);
+    /* Add a border */
     border-radius: var(--border-radius);
+    /* Round the corners */
     font-family: inherit;
+    /* Inherit font from parent */
     font-size: inherit;
+    /* Inherit font size from parent */
 }
 
 input:focus,
 textarea:focus,
 select:focus {
     outline: none;
+    /* Remove default outline */
     border-color: var(--primary-color);
+    /* Change border color on focus */
     box-shadow: var(--focus-ring);
+    /* Add a focus ring for accessibility */
 }
 
 /* Contact Form - Layout and interactions */
 .contact-form {
     background: var(--secondary-color);
+    /* Set form background color */
     padding: var(--spacing-md);
+    /* Add padding inside the form */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 .form-group {
     margin-bottom: var(--spacing-md);
+    /* Add spacing between form groups */
     position: relative;
+    /* Enable positioning for error messages */
 }
 
 label {
     display: block;
+    /* Make labels block-level */
     margin-bottom: var(--spacing-sm);
+    /* Add spacing below labels */
     font-weight: 500;
+    /* Make labels slightly bold */
 }
 
 label.required::after {
     content: "*";
+    /* Add an asterisk for required fields */
     color: #dc3545;
+    /* Set the asterisk color */
     margin-left: 4px;
+    /* Add spacing between label and asterisk */
 }
 
 .error-message {
     color: #dc3545;
+    /* Set error message color */
     font-size: 0.875em;
+    /* Make error messages smaller */
     margin-top: 4px;
+    /* Add spacing above error messages */
     min-height: 20px;
+    /* Ensure space for error messages */
 }
 
 input[aria-invalid="true"],
 textarea[aria-invalid="true"] {
     border-color: #dc3545;
+    /* Highlight invalid inputs */
 }
 
 .submit-button {
     background: var(--primary-color);
+    /* Set button background color */
     color: var(--secondary-color);
+    /* Set button text color */
     border: none;
+    /* Remove default border */
     padding: 1rem 2rem;
+    /* Add padding inside the button */
     border-radius: var(--border-radius);
+    /* Round the corners */
     cursor: pointer;
+    /* Change cursor to pointer */
     position: relative;
+    /* Enable positioning for the loader */
     transition: var(--transition);
+    /* Add smooth transition for hover effects */
     width: 100%;
+    /* Make button full width */
 }
 
 .submit-button:hover {
     background: var(--accent-color);
+    /* Change background color on hover */
 }
 
 .submit-button:disabled {
     opacity: 0.7;
+    /* Reduce opacity for disabled state */
     cursor: not-allowed;
+    /* Change cursor for disabled state */
 }
 
 .button-loader {
     width: 20px;
+    /* Set loader size */
     height: 20px;
+    /* Set loader size */
     border: 2px solid var(--secondary-color);
+    /* Add a border */
     border-radius: 50%;
+    /* Make the loader circular */
     border-top-color: transparent;
+    /* Hide the top border */
     animation: spin 0.8s linear infinite;
+    /* Add spinning animation */
     position: absolute;
+    /* Position the loader */
     left: 50%;
+    /* Center horizontally */
     top: 50%;
+    /* Center vertically */
     transform: translate(-50%, -50%);
+    /* Adjust for centering */
 }
 
 @keyframes spin {
     to {
         transform: translate(-50%, -50%) rotate(360deg);
+        /* Rotate the loader */
     }
 }
 
 /* Contact Info Styles */
 .contact-info {
     background: var(--secondary-color);
+    /* Set background color */
     padding: var(--spacing-md);
+    /* Add padding */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 .contact-list {
     list-style: none;
+    /* Remove default bullet points */
     padding: 0;
+    /* Remove default padding */
     margin: var(--spacing-md) 0;
+    /* Add spacing around the list */
 }
 
 .contact-list li {
     margin-bottom: var(--spacing-sm);
+    /* Add spacing between list items */
 }
 
 /* Table Styles - Data presentation */
 table {
     width: 100%;
+    /* Make tables full width */
     border-collapse: collapse;
+    /* Remove spacing between cells */
     margin: var(--spacing-md) 0;
+    /* Add spacing around tables */
 }
 
 th,
 td {
     padding: 0.75rem;
+    /* Add padding inside cells */
     border: 1px solid var(--accent-color);
+    /* Add borders to cells */
     text-align: left;
+    /* Align text to the left */
 }
 
 th {
     background-color: var(--primary-color);
+    /* Set header background color */
     color: var(--secondary-color);
+    /* Set header text color */
 }
 
 /* Contact Form Layout */
 .contact-container {
     display: grid;
+    /* Use CSS Grid for layout */
     grid-template-columns: 2fr 1fr;
+    /* Split into two columns */
     gap: var(--spacing-md);
+    /* Add spacing between columns */
     align-items: start;
+    /* Align items to the top */
 }
 
 .contact-image {
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 /* Image Handling - Responsive images and containers */
 .image-container {
     position: relative;
+    /* Enable positioning for hover effects */
     overflow: hidden;
+    /* Hide overflow for hover effects */
     border-radius: var(--border-radius);
+    /* Round the corners */
 }
 
 .image-container img {
     transition: transform 0.3s ease;
+    /* Add smooth transition for hover effects */
 }
 
 .image-container:hover img {
     transform: scale(1.05);
+    /* Scale image on hover */
 }
 
 /* About Page - Section specific styles */
 .about {
     max-width: 800px;
+    /* Constrain width for readability */
     margin: 0 auto;
+    /* Center the section */
 }
 
 .about .lead {
     font-size: 1.25rem;
+    /* Larger font size for lead text */
     color: var(--accent-color);
+    /* Set lead text color */
     margin-bottom: var(--spacing-lg);
+    /* Add spacing below lead text */
     max-width: 800px;
+    /* Constrain width for readability */
 }
 
 .profile-section {
     margin-bottom: var(--spacing-lg);
+    /* Add spacing below the section */
 }
 
 .profile-section .certification-card {
     padding: var(--spacing-lg);
+    /* Add padding inside the card */
 }
 
 .profile-section .content-wrapper {
     display: grid;
+    /* Use CSS Grid for layout */
     grid-template-columns: 2fr 1fr;
+    /* Split into two columns */
     gap: var(--spacing-lg);
+    /* Add spacing between columns */
     align-items: start;
+    /* Align items to the top */
 }
 
 .profile-image {
     max-width: 300px;
+    /* Constrain image width */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 .hobbies-section {
     margin-top: var(--spacing-lg);
+    /* Add spacing above the section */
 }
 
 .hobbies-list {
     margin-bottom: var(--spacing-lg);
+    /* Add spacing below the list */
 }
 
 .hobby-image {
     margin-bottom: var(--spacing-md);
+    /* Add spacing below the image */
     overflow: hidden;
+    /* Hide overflow for hover effects */
     border-radius: var(--border-radius);
+    /* Round the corners */
 }
 
 .hobby-image img {
     transition: transform var(--transition);
+    /* Add smooth transition for hover effects */
     margin-bottom: 0;
+    /* Remove default margin */
 }
 
 .certification-card:hover .hobby-image img {
     transform: scale(1.05);
+    /* Scale image on hover */
 }
 
 @media screen and (max-width: 768px) {
     .content-wrapper {
         grid-template-columns: 1fr;
+        /* Stack columns on small screens */
     }
 }
 
 /* About Page - Section specific styles */
 .about img {
     max-width: 500px;
+    /* Constrain image width */
     width: 100%;
+    /* Ensure images are responsive */
     margin: var(--spacing-md) auto;
+    /* Center images and add spacing */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
     display: block;
+    /* Remove inline spacing */
 }
 
 .about figure {
     margin: var(--spacing-md) 0;
+    /* Add spacing around figures */
     text-align: center;
+    /* Center-align figure content */
 }
 
 .about figcaption {
     color: var(--accent-color);
+    /* Set caption text color */
     font-style: italic;
+    /* Italicize captions */
     margin-top: var(--spacing-sm);
+    /* Add spacing above captions */
 }
 
 .about section {
     margin-bottom: var(--spacing-lg);
+    /* Add spacing below sections */
     scroll-margin-top: 80px;
+    /* Ensure sections are not hidden under sticky headers */
 }
 
 .about section:first-of-type img {
     max-width: 300px;
+    /* Constrain image width for the first section */
 }
 
 .about .content-wrapper {
     display: flex;
+    /* Use flexbox for layout */
     align-items: start;
+    /* Align items to the top */
     gap: var(--spacing-md);
+    /* Add spacing between items */
     margin: var(--spacing-md) 0;
+    /* Add spacing around the wrapper */
 }
 
 .about .content-wrapper.image-right {
     flex-direction: row;
+    /* Arrange items left-to-right */
 }
 
 .about .content-wrapper.image-left {
     flex-direction: row-reverse;
+    /* Arrange items right-to-left */
 }
 
 .about .content-wrapper figure {
     flex: 1;
+    /* Allow figure to grow */
     margin: 0;
+    /* Remove default margin */
 }
 
 .about .content-wrapper .text-content {
     flex: 1;
+    /* Allow text content to grow */
 }
 
 /* Hobbies Navigation */
 .hobbies-nav {
     margin: var(--spacing-md) 0;
+    /* Add spacing around the navigation */
 }
 
 .hobbies-list {
     list-style: none;
+    /* Remove default bullet points */
     display: flex;
+    /* Use flexbox for layout */
     flex-wrap: wrap;
+    /* Allow items to wrap */
     gap: var(--spacing-sm);
+    /* Add spacing between items */
     justify-content: center;
+    /* Center-align items */
 }
 
 .hobby-link {
     display: inline-block;
+    /* Ensure links behave like blocks */
     padding: var(--spacing-sm) var(--spacing-md);
+    /* Add padding inside links */
     background-color: var(--primary-color);
+    /* Set link background color */
     color: var(--secondary-color);
+    /* Set link text color */
     text-decoration: none;
+    /* Remove underline from links */
     border-radius: var(--border-radius);
+    /* Round the corners */
     transition: var(--transition);
+    /* Add smooth transition for hover effects */
 }
 
 .hobby-link:hover,
 .hobby-link:focus {
     background-color: var(--accent-color);
+    /* Change background color on hover/focus */
     transform: translateY(-2px);
+    /* Add a slight lift effect */
 }
 
 /* Hero Section - Landing page feature */
 .hero {
     display: grid;
+    /* Use CSS Grid for layout */
     grid-template-columns: 1fr 1fr;
+    /* Split into two columns */
     gap: var(--spacing-lg);
+    /* Add spacing between columns */
     align-items: center;
+    /* Center-align items vertically */
     margin-bottom: var(--spacing-lg);
+    /* Add spacing below the hero section */
 }
 
 .hero-content {
     padding-right: var(--spacing-lg);
+    /* Add padding to the right of the content */
 }
 
 .hero-text {
     font-size: 1.25rem;
+    /* Larger font size for hero text */
     margin: var(--spacing-md) 0;
+    /* Add spacing around the text */
     color: var(--accent-color);
+    /* Set hero text color */
 }
 
 .hero-image {
     width: 100%;
+    /* Ensure the image is responsive */
     height: auto;
+    /* Maintain aspect ratio */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 /* CTA Buttons */
 .cta-buttons {
     display: flex;
+    /* Use flexbox for layout */
     gap: var(--spacing-md);
+    /* Add spacing between buttons */
     margin-top: var(--spacing-lg);
+    /* Add spacing above the buttons */
 }
 
 .cta-button {
     padding: var(--spacing-sm) var(--spacing-md);
+    /* Add padding inside buttons */
     border-radius: var(--border-radius);
+    /* Round the corners */
     text-decoration: none;
+    /* Remove underline from buttons */
     transition: var(--transition);
+    /* Add smooth transition for hover effects */
     text-align: center;
+    /* Center-align text */
 }
 
 .cta-button.primary {
     background: var(--primary-color);
+    /* Set primary button background color */
     color: var(--secondary-color);
+    /* Set primary button text color */
 }
 
 .cta-button.secondary {
     background: transparent;
+    /* Set secondary button background color */
     color: var(--primary-color);
+    /* Set secondary button text color */
     border: 2px solid var(--primary-color);
+    /* Add a border to secondary buttons */
 }
 
 /* Introduction Grid */
 .intro-grid {
     display: grid;
+    /* Use CSS Grid for layout */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Create a responsive grid */
     gap: var(--spacing-md);
+    /* Add spacing between grid items */
     margin: var(--spacing-lg) 0;
+    /* Add spacing around the grid */
 }
 
 .intro-card {
     background: var(--secondary-color);
+    /* Set card background color */
     padding: var(--spacing-md);
+    /* Add padding inside cards */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 .read-more {
     display: inline-block;
+    /* Ensure links behave like blocks */
     margin-top: var(--spacing-sm);
+    /* Add spacing above the link */
     color: var(--primary-color);
+    /* Set link text color */
     text-decoration: none;
+    /* Remove underline from links */
     font-weight: 500;
+    /* Make the link slightly bold */
 }
 
 /* Features Grid - Component showcase */
 .features-grid {
     display: grid;
+    /* Use CSS Grid for layout */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Create a responsive grid */
     gap: var(--spacing-md);
-    margin-top: var (--spacing-md);
+    /* Add spacing between grid items */
+    margin-top: var(--spacing-md);
+    /* Add spacing above the grid */
 }
 
 .feature {
     text-align: center;
+    /* Center-align feature content */
     padding: var(--spacing-md);
+    /* Add padding inside features */
 }
 
 /* Responsive adjustment for the content wrapper */
 @media screen and (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
+        /* Stack columns on small screens */
         text-align: center;
+        /* Center-align text */
     }
 
     .hero-content {
         padding-right: 0;
+        /* Remove padding on small screens */
     }
 
     .cta-buttons {
         justify-content: center;
+        /* Center-align buttons */
     }
 
     .about .content-wrapper,
     .about .content-wrapper.image-right,
     .about .content-wrapper.image-left {
         flex-direction: column;
+        /* Stack items vertically on small screens */
     }
 
     .about .content-wrapper figure,
     .about .content-wrapper .text-content {
         width: 100%;
+        /* Make items full width */
     }
 
     .hobbies-list {
         flex-direction: column;
+        /* Stack items vertically on small screens */
         align-items: stretch;
+        /* Stretch items to full width */
     }
 
     .hobby-link {
         text-align: center;
+        /* Center-align text */
     }
 }
 
 hr {
     margin: var(--spacing-lg) 0;
+    /* Add spacing around horizontal rules */
     border: none;
+    /* Remove default border */
     border-top: 1px solid var(--accent-color);
+    /* Add a custom border */
     opacity: 0.3;
+    /* Reduce opacity for a subtle effect */
 }
 
 /* Accessibility - Focus and motion preferences */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
+        /* Disable animations */
         animation-iteration-count: 1 !important;
+        /* Disable animations */
         transition-duration: 0.01ms !important;
+        /* Disable transitions */
         scroll-behavior: auto !important;
+        /* Disable smooth scrolling */
     }
 }
 
 .sr-only {
     position: absolute;
+    /* Hide element visually */
     width: 1px;
+    /* Minimize width */
     height: 1px;
+    /* Minimize height */
     padding: 0;
+    /* Remove padding */
     margin: -1px;
+    /* Move element out of view */
     overflow: hidden;
+    /* Hide overflow */
     clip: rect(0, 0, 0, 0);
+    /* Clip element */
     border: 0;
+    /* Remove border */
 }
 
 /* Job Experience - Career section styling */
 .job-experience {
     max-width: 800px;
+    /* Constrain width for readability */
     margin: 0 auto;
+    /* Center the section */
 }
 
 .lead {
     font-size: 1.25rem;
+    /* Larger font size for lead text */
     color: var(--accent-color);
+    /* Set lead text color */
     margin-bottom: var(--spacing-lg);
+    /* Add spacing below lead text */
 }
 
 .skills-grid {
     display: grid;
+    /* Use CSS Grid for layout */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Create a responsive grid */
     gap: var(--spacing-md);
+    /* Add spacing between grid items */
     margin-bottom: var(--spacing-lg);
+    /* Add spacing below the grid */
 }
 
 .skill-card {
     background: var(--secondary-color);
+    /* Set card background color */
     padding: var(--spacing-md);
+    /* Add padding inside cards */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 .skill-list {
     list-style: none;
+    /* Remove default bullet points */
     padding: 0;
+    /* Remove default padding */
 }
 
 .skill-list li {
     padding: var(--spacing-sm) 0;
+    /* Add spacing around list items */
     border-bottom: 1px solid var(--accent-color);
+    /* Add a bottom border */
 }
 
 .skill-list li:last-child {
     border-bottom: none;
+    /* Remove border from the last item */
 }
 
 /* Timeline - Experience visualization */
 .timeline {
     position: relative;
+    /* Enable positioning for the timeline */
     padding-left: var(--spacing-lg);
+    /* Add padding to the left */
 }
 
 .timeline::before {
     content: '';
+    /* Add a pseudo-element for the timeline line */
     position: absolute;
+    /* Position the line */
     left: 0;
+    /* Align to the left */
     top: 0;
+    /* Align to the top */
     bottom: 0;
+    /* Stretch to the bottom */
     width: 2px;
+    /* Set the line width */
     background: var(--accent-color);
+    /* Set the line color */
 }
 
 .timeline-entry {
     position: relative;
+    /* Enable positioning for timeline entries */
     margin-bottom: var(--spacing-lg);
+    /* Add spacing between entries */
     padding-left: var(--spacing-md);
+    /* Add padding to the left */
 }
 
 .timeline-entry::before {
     content: '';
+    /* Add a pseudo-element for the timeline marker */
     position: absolute;
+    /* Position the marker */
     left: calc(var(--spacing-md) * -1);
+    /* Align to the left of the entry */
     top: 0;
+    /* Align to the top */
     width: 12px;
+    /* Set marker size */
     height: 12px;
+    /* Set marker size */
     border-radius: 50%;
+    /* Make the marker circular */
     background: var(--primary-color);
+    /* Set marker color */
     border: 2px solid var(--secondary-color);
+    /* Add a border */
 }
 
 .timeline-header {
     margin-bottom: var(--spacing-sm);
+    /* Add spacing below the header */
 }
 
 .timeline-date {
     color: var(--accent-color);
+    /* Set date text color */
     font-size: 0.875rem;
+    /* Smaller font size for dates */
 }
 
 .achievement-list {
     list-style: none;
+    /* Remove default bullet points */
     padding: 0;
+    /* Remove default padding */
 }
 
 .achievement-list li {
     position: relative;
+    /* Enable positioning for list items */
     padding-left: var(--spacing-md);
+    /* Add padding to the left */
     margin-bottom: var(--spacing-sm);
+    /* Add spacing between items */
 }
 
 .achievement-list li::before {
     content: '→';
+    /* Add a pseudo-element for the arrow */
     position: absolute;
+    /* Position the arrow */
     left: 0;
+    /* Align to the left */
     color: var(--accent-color);
+    /* Set arrow color */
 }
 
 .cta-button {
     display: inline-flex;
+    /* Use flexbox for layout */
     align-items: center;
+    /* Center-align items vertically */
     gap: var(--spacing-sm);
+    /* Add spacing between items */
     background: var(--primary-color);
+    /* Set button background color */
     color: var(--secondary-color);
+    /* Set button text color */
     padding: var(--spacing-sm) var(--spacing-md);
+    /* Add padding inside buttons */
     border-radius: var(--border-radius);
+    /* Round the corners */
     text-decoration: none;
+    /* Remove underline from buttons */
     transition: var(--transition);
+    /* Add smooth transition for hover effects */
 }
 
 .cta-button:hover {
     background: var(--accent-color);
+    /* Change background color on hover */
     transform: translateY(-2px);
+    /* Add a slight lift effect */
 }
 
 .icon {
     fill: currentColor;
+    /* Ensure icons inherit text color */
 }
 
 /* Education Layout - Academic history */
 .education {
     max-width: 800px;
+    /* Constrain width for readability */
     margin: 0 auto;
+    /* Center the section */
 }
 
 .certification-grid {
     display: grid;
+    /* Use CSS Grid for layout */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Create a responsive grid */
     gap: var(--spacing-md);
+    /* Add spacing between grid items */
     margin: var(--spacing-md) 0;
+    /* Add spacing around the grid */
 }
 
 .certification-card {
     background: var(--secondary-color);
+    /* Set card background color */
     padding: var(--spacing-md);
+    /* Add padding inside cards */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 .certification-card h3 {
     color: var(--primary-color);
+    /* Set heading text color */
     margin-bottom: var(--spacing-sm);
+    /* Add spacing below headings */
 }
 
 .certification-card .institution {
     color: var(--accent-color);
+    /* Set institution text color */
     font-weight: 500;
+    /* Make text slightly bold */
 }
 
 .certification-card time {
     display: inline-block;
+    /* Ensure dates behave like blocks */
     margin: var(--spacing-sm) 0;
+    /* Add spacing around dates */
     font-size: 0.875rem;
+    /* Smaller font size for dates */
     color: var(--accent-color);
+    /* Set date text color */
 }
 
 .table-container {
     margin: var(--spacing-lg) 0;
+    /* Add spacing around the table */
     overflow-x: auto;
+    /* Enable horizontal scrolling for small screens */
     background: var(--secondary-color);
+    /* Set table background color */
     border-radius: var(--border-radius);
+    /* Round the corners */
     box-shadow: var(--box-shadow);
+    /* Add a subtle shadow */
 }
 
 .education table {
     margin: 0;
+    /* Remove default margin */
     width: 100%;
+    /* Make tables full width */
     min-width: 600px;
+    /* Set a minimum width for tables */
 }
 
 .education caption {
     padding: var(--spacing-sm);
+    /* Add padding inside captions */
     background: var(--primary-color);
-    color: var (--secondary-color);
+    /* Set caption background color */
+    color: var(--secondary-color);
+    /* Set caption text color */
     font-weight: 500;
+    /* Make captions slightly bold */
 }
 
 .education th {
     background: var(--accent-color);
+    /* Set header background color */
 }
 
 .education td,
 .education th {
     padding: var(--spacing-sm);
+    /* Add padding inside cells */
 }
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
     :root {
         --font-size-base: 1rem;
+        /* Adjust base font size for small screens */
         --spacing-unit: 6px;
+        /* Adjust base spacing unit for small screens */
         --spacing-sm: 12px;
+        /* Adjust small spacing for small screens */
         --spacing-md: 18px;
+        /* Adjust medium spacing for small screens */
         --spacing-lg: 24px;
+        /* Adjust large spacing for small screens */
     }
 
     .column {
         width: 100%;
+        /* Make columns full width on small screens */
         float: none;
+        /* Disable floating on small screens */
     }
 
     .container {
         padding: var(--spacing-md);
+        /* Adjust container padding for small screens */
     }
 
     .header h1 {
         font-size: 2rem;
+        /* Adjust heading font size for small screens */
     }
 
     .contact-container,
     .skills-grid,
     .certification-grid {
         grid-template-columns: 1fr;
+        /* Stack grid items on small screens */
     }
 
     .timeline {
         padding-left: var(--spacing-md);
+        /* Adjust timeline padding for small screens */
     }
 
     .timeline-entry {
         padding-left: var(--spacing-md);
+        /* Adjust entry padding for small screens */
     }
 
     .certification-grid {
         grid-template-columns: 1fr;
+        /* Stack grid items on small screens */
     }
 
     .table-container {
         margin: var(--spacing-lg) calc(var(--spacing-lg) * -1);
+        /* Adjust table margin for small screens */
         border-radius: 0;
+        /* Remove border radius for small screens */
     }
 
     .nav-list {
         flex-direction: column;
+        /* Stack navigation items on small screens */
     }
 
     .nav-list a {
         padding: var(--spacing-md);
+        /* Adjust link padding for small screens */
         text-align: center;
+        /* Center-align text on small screens */
     }
 
     .profile-section .content-wrapper {
         grid-template-columns: 1fr;
+        /* Stack grid items on small screens */
     }
 
     .profile-image {
         max-width: 100%;
+        /* Make images full width on small screens */
         margin: var(--spacing-lg) auto;
+        /* Adjust image margin for small screens */
     }
 
     .certification-grid {
         grid-template-columns: 1fr;
+        /* Stack grid items on small screens */
     }
 }
 
@@ -977,24 +1419,33 @@ hr {
 @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #f5f5f5;
+        /* Adjust primary color for dark mode */
         --secondary-color: #121212;
+        /* Adjust secondary color for dark mode */
         --text-color: #e0e0e0;
+        /* Adjust text color for dark mode */
         --accent-color: #9e9e9e;
+        /* Adjust accent color for dark mode */
         --box-shadow: 0 2px 8px rgb(255 255 255 / 0.1);
+        /* Adjust box shadow for dark mode */
     }
 
     body {
         background-color: var(--secondary-color);
+        /* Set dark mode background color */
     }
 
     img {
         opacity: 0.9;
+        /* Reduce image opacity for dark mode */
         filter: brightness(0.9);
+        /* Adjust image brightness for dark mode */
     }
 
     .certification-card,
     .skill-card {
         background: rgba(255, 255, 255, 0.05);
+        /* Adjust card background for dark mode */
     }
 }
 
@@ -1004,79 +1455,107 @@ hr {
     .topnav,
     footer {
         display: none;
+        /* Hide navigation and footer in print mode */
     }
 
     body {
         color: black;
+        /* Set text color for print mode */
     }
 
     a {
         text-decoration: none;
+        /* Remove underline from links in print mode */
         color: black;
+        /* Set link color for print mode */
     }
 
     .container {
         max-width: 100%;
+        /* Make container full width in print mode */
         padding: 0;
+        /* Remove padding in print mode */
     }
 
     @page {
         margin: 2cm;
+        /* Add margin for printed pages */
     }
 
     a[href^="http"]::after {
         content: " (" attr(href) ")";
+        /* Display URLs after links in print mode */
     }
 }
 
 /* Enhanced About Page Styles */
 .about {
     max-width: 800px;
+    /* Constrain width for readability */
     margin: 0 auto;
+    /* Center the section */
 }
 
 .about .certification-card {
     transition: transform var(--transition);
+    /* Add smooth transition for hover effects */
 }
 
 .about .certification-card:hover {
     transform: translateY(-4px);
+    /* Add a slight lift effect on hover */
 }
 
 .hobby-image {
     aspect-ratio: 16/9;
+    /* Set aspect ratio for hobby images */
     overflow: hidden;
+    /* Hide overflow for hover effects */
     border-radius: var(--border-radius) var(--border-radius) 0 0;
+    /* Round the top corners */
     margin: calc(var(--spacing-md) * -1) calc(var(--spacing-md) * -1) var(--spacing-md);
+    /* Adjust margin for hover effects */
 }
 
 .hobby-image img {
     width: 100%;
+    /* Ensure images are responsive */
     height: 100%;
+    /* Ensure images fill the container */
     object-fit: cover;
+    /* Ensure images cover the container */
 }
 
 .hobbies-list {
     position: sticky;
+    /* Make the list sticky */
     top: 60px;
+    /* Stick to the top of the viewport */
     background: var(--secondary-color);
+    /* Set background color */
     padding: var(--spacing-sm) 0;
+    /* Add padding inside the list */
     z-index: 90;
+    /* Ensure the list is above other content */
     border-bottom: 1px solid var(--accent-color);
+    /* Add a bottom border */
 }
 
 .certification-grid {
     scroll-margin-top: 120px;
+    /* Ensure sections are not hidden under sticky headers */
 }
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .hobby-image {
         aspect-ratio: 4/3;
+        /* Adjust aspect ratio for small screens */
     }
 
     .hobbies-list {
         top: 50px;
+        /* Adjust sticky position for small screens */
     }
 
     /* ...rest of existing media query styles... */
@@ -1087,21 +1566,27 @@ hr {
 .submit-button,
 .nav-link {
     position: relative;
+    /* Enable positioning for hover effects */
     overflow: hidden;
+    /* Hide overflow for hover effects */
     transform: translateY(0);
+    /* Reset transform */
     transition: transform var(--transition);
+    /* Add smooth transition for hover effects */
 }
 
 .cta-button:hover,
 .submit-button:hover,
 .nav-link:hover {
     transform: translateY(-2px);
+    /* Add a slight lift effect on hover */
 }
 
 .cta-button:active,
 .submit-button:active,
 .nav-link:active {
     transform: translateY(0);
+    /* Reset transform on active state */
 }
 
 /* Focus States for Accessibility */
@@ -1110,7 +1595,9 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
     outline: none;
+    /* Remove default outline */
     box-shadow: var(--focus-ring);
+    /* Add a focus ring for accessibility */
 }
 
 /* Performance Optimizations */
@@ -1120,8 +1607,12 @@ textarea:focus-visible {
     *::before,
     *::after {
         animation-duration: 0.01ms !important;
+        /* Disable animations */
         animation-iteration-count: 1 !important;
+        /* Disable animations */
         transition-duration: 0.01ms !important;
+        /* Disable transitions */
         scroll-behavior: auto !important;
+        /* Disable smooth scrolling */
     }
 }
